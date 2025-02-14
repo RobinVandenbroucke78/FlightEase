@@ -1,0 +1,16 @@
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\bin\Debug\net8.0\FlightEase.Repositories.deps.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\bin\Debug\net8.0\FlightEase.Repositories.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\bin\Debug\net8.0\FlightEase.Repositories.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\bin\Debug\net8.0\FlightEase.Domains.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\bin\Debug\net8.0\FlightEase.Domains.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.csproj.AssemblyReference.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.AssemblyInfoInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.AssemblyInfo.cs
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.sourcelink.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEa.10D244BE.Up2Date
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\refint\FlightEase.Repositories.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\FlightEase.Repositories.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Repositories\obj\Debug\net8.0\ref\FlightEase.Repositories.dll

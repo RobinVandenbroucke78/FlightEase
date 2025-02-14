@@ -1,0 +1,15 @@
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\bin\Debug\net8.0\FlightEase.Domains.deps.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\bin\Debug\net8.0\FlightEase.Domains.runtimeconfig.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\bin\Debug\net8.0\FlightEase.Domains.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\bin\Debug\net8.0\FlightEase.Domains.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.csproj.AssemblyReference.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.AssemblyInfoInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.AssemblyInfo.cs
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.csproj.CoreCompileInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.sourcelink.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\refint\FlightEase.Domains.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\FlightEase.Domains.genruntimeconfig.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Domains\obj\Debug\net8.0\ref\FlightEase.Domains.dll
