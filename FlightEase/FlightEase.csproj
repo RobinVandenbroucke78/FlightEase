@@ -18,13 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMapper\" />
-    <Folder Include="ViewModels\" />
+    <ProjectReference Include="..\FlightEase.Domains\FlightEase.Domains.csproj" />
+    <ProjectReference Include="..\FlightEase.Services\FlightEase.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlightEase.Domains\FlightEase.Domains.csproj" />
-    <ProjectReference Include="..\FlightEase.Services\FlightEase.Services.csproj" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>
