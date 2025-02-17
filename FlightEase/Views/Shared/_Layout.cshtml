@@ -13,11 +13,9 @@
 <body>
     @await Html.PartialAsync("_Header")
 
-    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
     @await Html.PartialAsync("_Footer")
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
