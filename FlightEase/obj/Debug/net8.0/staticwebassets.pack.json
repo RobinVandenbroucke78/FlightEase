@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\FlightEase.summwudpt2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\banner.jpeg",
+      "PackagePath": "staticwebassets\\images\\banner.jpeg"
     },
     {
       "Id": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\logo.png",

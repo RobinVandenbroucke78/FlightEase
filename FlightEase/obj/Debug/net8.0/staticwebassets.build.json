@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+YOg+YLLdkTc48qisL55UlpPzOwV2VSh/7FoFlagFn4=",
+  "Hash": "Fpo1KJluVwa2R+zHndhqOuU7OHSTNF/ix/PZRqIwo0E=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1319,6 +1319,27 @@
       "OriginalItemSpec": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FlightEase.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "css/home#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gbdw6jwdes",
+      "Integrity": "lMKbu8JJ1GWVope7zKWs6yci0Lzu51YDahR1NoCO2RU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
       "Identity": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\site.css",
       "SourceId": "FlightEase",
       "SourceType": "Discovered",
@@ -1359,6 +1380,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\banner.jpeg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/banner#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "539l2uli5n",
+      "Integrity": "QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\banner.jpeg"
     },
     {
       "Identity": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\logo.png",
@@ -2601,6 +2643,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/home.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lMKbu8JJ1GWVope7zKWs6yci0Lzu51YDahR1NoCO2RU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 14:53:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lMKbu8JJ1GWVope7zKWs6yci0Lzu51YDahR1NoCO2RU="
+        }
+      ]
+    },
+    {
+      "Route": "css/home.gbdw6jwdes.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lMKbu8JJ1GWVope7zKWs6yci0Lzu51YDahR1NoCO2RU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 14:53:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gbdw6jwdes"
+        },
+        {
+          "Name": "label",
+          "Value": "css/home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lMKbu8JJ1GWVope7zKWs6yci0Lzu51YDahR1NoCO2RU="
+        }
+      ]
+    },
     {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\css\\site.css",
@@ -5146,6 +5270,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "images/banner.539l2uli5n.jpeg",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\banner.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 14:47:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "539l2uli5n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/banner.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728="
+        }
+      ]
+    },
+    {
+      "Route": "images/banner.jpeg",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\flightEase\\FlightEase\\wwwroot\\images\\banner.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 14:47:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728="
         }
       ]
     },
