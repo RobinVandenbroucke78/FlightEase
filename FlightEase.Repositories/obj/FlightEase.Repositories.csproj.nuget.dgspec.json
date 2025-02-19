@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Repositories\\FlightEase.Repositories.csproj": {}
+    "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Repositories\\FlightEase.Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\FlightEase.Domains.csproj": {
+    "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\FlightEase.Domains.csproj",
+        "projectUniqueName": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj",
         "projectName": "FlightEase.Domains",
-        "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\FlightEase.Domains.csproj",
-        "packagesPath": "C:\\Users\\jarne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\obj\\",
+        "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj",
+        "packagesPath": "C:\\Users\\robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jarne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,20 +85,20 @@
         }
       }
     },
-    "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Repositories\\FlightEase.Repositories.csproj": {
+    "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Repositories\\FlightEase.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Repositories\\FlightEase.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Repositories\\FlightEase.Repositories.csproj",
         "projectName": "FlightEase.Repositories",
-        "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Repositories\\FlightEase.Repositories.csproj",
-        "packagesPath": "C:\\Users\\jarne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Repositories\\FlightEase.Repositories.csproj",
+        "packagesPath": "C:\\Users\\robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jarne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,15 +107,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\FlightEase.Domains.csproj": {
-                "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\Full_Stack_Development_Assignment\\FlightEase.Domains\\FlightEase.Domains.csproj"
+              "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj": {
+                "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj"
               }
             }
           }
