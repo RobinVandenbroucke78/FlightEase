@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FlightEase.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/png" href="~/images/logo.png"/>
+
 </head>
 <body>
     @await Html.PartialAsync("_Header")
 
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
     @await Html.PartialAsync("_Footer")
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

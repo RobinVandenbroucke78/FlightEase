@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178
+VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightEase", "FlightEase\FlightEase.csproj", "{23978039-4043-4BB5-85B5-955C4AB74D9F}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightEase.Repositories", "FlightEase.Repositories\FlightEase.Repositories.csproj", "{5DEDBDEE-12C2-4305-8C24-247662B5318F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightEase.Services", "FlightEase.Services\FlightEase.Services.csproj", "{17B92736-6F1D-4C43-B8F0-4F93F6D32A98}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightEase.Util", "FlightEase.Util\FlightEase.Util.csproj", "{22363F2C-2824-4B05-84EC-9D834FA7BA9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{17B92736-6F1D-4C43-B8F0-4F93F6D32A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B92736-6F1D-4C43-B8F0-4F93F6D32A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B92736-6F1D-4C43-B8F0-4F93F6D32A98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22363F2C-2824-4B05-84EC-9D834FA7BA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22363F2C-2824-4B05-84EC-9D834FA7BA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22363F2C-2824-4B05-84EC-9D834FA7BA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22363F2C-2824-4B05-84EC-9D834FA7BA9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
