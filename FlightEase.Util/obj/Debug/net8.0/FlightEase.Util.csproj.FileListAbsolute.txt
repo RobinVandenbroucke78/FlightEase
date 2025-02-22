@@ -1,0 +1,12 @@
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Util.deps.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Util.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Util.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.AssemblyInfoInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.AssemblyInfo.cs
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.csproj.CoreCompileInputs.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.sourcelink.json
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\refint\FlightEase.Util.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\ref\FlightEase.Util.dll
