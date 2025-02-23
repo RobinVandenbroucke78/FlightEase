@@ -6,71 +6,79 @@
     <link rel="stylesheet" href="~/css/home.css" />
 }
 
-<div class="container">
-    <div class="text-center my-4">
-        <img src="~/images/logo.png" alt="FlightEase Logo" class="img-fluid" style="max-width: 200px;">
-    </div>
 
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Welcome to FlightEase</h1>
-        <p class="lead">Your one-stop solution for booking flights between major world cities.</p>
-        <hr class="my-4">
-        <p>Experience flexibility in travel planning, customer convenience, and personalized service.</p>
-        <a class="btn btn-primary btn-lg" href="/Flights" role="button">Book a Flight</a>
+<div class="row my-4 align-items-center">
+    <div class="col-md-2 text-center" style="min-width: 250px;">
+        <img src="~/images/logo.png" alt="JARO airlines Logo" class="img-fluid" style="max-width: 200px;">
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>About Us</h2>
-            <p>FlightEase is dedicated to providing a seamless and enjoyable travel experience. We offer daily flights between major world cities with flexible booking options and personalized services.</p>
-            <p><a class="btn btn-secondary" href="/About">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Daily flights between New York, London, Tokyo, Dubai, Sydney, Cape Town, and Singapore</li>
-                <li>Flexible booking options with multiple stopovers</li>
-                <li>Economy and Business class tickets</li>
-                <li>Automatic seat assignment</li>
-                <li>Meal preferences including vegetarian, vegan, halal, kosher, gluten-free, and locally inspired meals</li>
-                <li>Seasonal pricing adjustments</li>
-                <li>Hotel reservations at your destination</li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <h2>Customer Support</h2>
-            <p>Our customer support team is here to assist you with any questions or concerns. We are committed to providing the best service possible to ensure a smooth and enjoyable travel experience.</p>
-            <p><a class="btn btn-secondary" href="/Contact">Contact us &raquo;</a></p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Popular Destinations</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="~/images/newyork.jpg" class="img-fluid" alt="New York">
-                    <h4>New York</h4>
-                </div>
-                <div class="col-md-3">
-                    <img src="~/images/london.jpg" class="img-fluid" alt="London">
-                    <h4>London</h4>
-                </div>
-                <div class="col-md-3">
-                    <img src="~/images/tokyo.jpg" class="img-fluid" alt="Tokyo">
-                    <h4>Tokyo</h4>
-                </div>
-                <div class="col-md-3">
-                    <img src="~/images/dubai.jpg" class="img-fluid" alt="Dubai">
-                    <h4>Dubai</h4>
-                </div>
-            </div>
+    <div class="col-md-10">
+        <div class="jumbotron">
+            <h1 class="display-4">Welkom bij JARO airlines</h1>
+            <p class="lead">Jouw one-stop-oplossing voor het boeken van vluchten tussen grote wereldsteden.</p>
+            <hr class="my-4">
+            <p>Ervaar flexibiliteit in reisplanning, klantenservicegemak en gepersonaliseerde dienstverlening.</p>
+            <a class="btn btn-primary btn-lg" href="/Flights" role="button">Boek een vlucht</a>
         </div>
     </div>
 </div>
 
-@* <div class="banner">
-    <img src="~/images/banner.jpeg" alt="Banner Image">
-</div> *@
+<div class="row">
+    <div class="col-md-4">
+        <h2>Over ons</h2>
+        <p>JARO Airlines zet zich in voor het bieden van een naadloze en plezierige reiservaring. Wij bieden dagelijkse vluchten tussen grote wereldsteden met flexibele boekingsopties en gepersonaliseerde diensten.</p>
+        <p><a class="btn btn-secondary" href="/About">Meer informatie &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Onze diensten</h2>
+        <ul>
+            <li>Dagelijkse vluchten tussen New York, Londen, Tokio, Dubai, Sydney, Kaapstad en Singapore</li>
+            <li>Flexibele boekingsopties met meerdere tussenstops</li>
+            <li>Economy- en Businessclass-tickets</li>
+            <li>Automatische stoeltoewijzing</li>
+            <li>Maaltijdvoorkeuren, waaronder vegetarisch, veganistisch, halal, koosjer, glutenvrij en lokaal geïnspireerde maaltijden</li>
+            <li>Seizoensgebonden prijsaanpassingen</li>
+            <li>Hotelreserveringen op uw bestemming</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Klantenservice</h2>
+        <p>Ons klantenserviceteam staat klaar om je te helpen met eventuele vragen of zorgen. We zijn toegewijd om de best mogelijke service te bieden om een soepele en plezierige reiservaring te garanderen.</p>
+        <p><a class="btn btn-secondary" href="/Contact">Neem contact met ons op &raquo;</a></p>
+    </div>
+</div>
 
-
+<div class="row">
+    <div class="col-md-12">
+        <h2>Populaire bestemmingen</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>New York</h4>
+                <img src="~/images/new_york.jpg" class="img-fluid" alt="New York">
+            </div>
+            <div class="col-md-3">
+                <h4>Londen</h4>
+                <img src="~/images/londen.jpg" class="img-fluid" alt="Londen">
+            </div>
+            <div class="col-md-3">
+                <h4>Tokio</h4>
+                <img src="~/images/tokio.jpg" class="img-fluid" alt="Tokio">
+            </div>
+            <div class="col-md-3">
+                <h4>Dubai</h4>
+                <img src="~/images/dubai.jpg" class="img-fluid" alt="Dubai">
+            </div>
+            <div class="col-md-3">
+                <h4>Kaapstad</h4>
+                <img src="~/images/kaapstad.jpg" class="img-fluid" alt="Kaapstad">
+            </div>
+            <div class="col-md-3">
+                <h4>Sydney</h4>
+                <img src="~/images/sydney.jpg" class="img-fluid" alt="Sydney">
+            </div>
+            <div class="col-md-3">
+                <h4>Singapore</h4>
+                <img src="~/images/singapore.jpg" class="img-fluid" alt="Singapore">
+            </div>
+        </div>
+    </div>
+</div>

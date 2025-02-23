@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\FlightEase.summwudpt2.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
-      "PackagePath": "staticwebassets\\css\\home.css"
-    },
-    {
       "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -21,8 +17,36 @@
       "PackagePath": "staticwebassets\\images\\banner.jpeg"
     },
     {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\dubai.jpg",
+      "PackagePath": "staticwebassets\\images\\dubai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\kaapstad.jpg",
+      "PackagePath": "staticwebassets\\images\\kaapstad.jpg"
+    },
+    {
       "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\londen.jpg",
+      "PackagePath": "staticwebassets\\images\\londen.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\new_york.jpg",
+      "PackagePath": "staticwebassets\\images\\new_york.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
+      "PackagePath": "staticwebassets\\images\\singapore.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\sydney.jpg",
+      "PackagePath": "staticwebassets\\images\\sydney.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\tokio.jpg",
+      "PackagePath": "staticwebassets\\images\\tokio.jpg"
     },
     {
       "Id": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\js\\site.js",

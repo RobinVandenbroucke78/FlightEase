@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FlightEase.styles.css" asp-append-version="true" />
-    <link rel="icon" type="image/png" href="~/images/logo.png"/>
+    <link rel="icon" type="image/png" href="~/images/logo.png" />
     @await RenderSectionAsync("Styles", required: false)
 </head>
-<body>
+<body class="min-vh-100 d-flex flex-column">
     @await Html.PartialAsync("_Header")
 
-    <div class="container">
+    <div class="container flex-grow-1 mw-100">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
     @await Html.PartialAsync("_Footer")
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

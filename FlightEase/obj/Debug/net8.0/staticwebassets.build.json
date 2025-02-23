@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jtdJiMkyaI52lTTL+utn3/aJYxKgRYawAKpM4cZ8ECY=",
+  "Hash": "kEaEE4j/WhDezhGQstxaFOHMCqG86S7rP8r1F1wduIk=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1319,27 +1319,6 @@
       "OriginalItemSpec": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FlightEase.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
-      "SourceId": "FlightEase",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
-      "BasePath": "_content/FlightEase",
-      "RelativePath": "css/home#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "g0adz89y4q",
-      "Integrity": "EFnY9FhE23+Lv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\home.css"
-    },
-    {
       "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\site.css",
       "SourceId": "FlightEase",
       "SourceType": "Discovered",
@@ -1354,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d0v7up98vm",
-      "Integrity": "vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA=",
+      "Fingerprint": "5roecne6y6",
+      "Integrity": "0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI+sC/fDJNI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1403,6 +1382,48 @@
       "OriginalItemSpec": "wwwroot\\images\\banner.jpeg"
     },
     {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\dubai.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/dubai#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s4rhpotqwt",
+      "Integrity": "ZPPnijiI6oeGvRTSZlNPsVcqDQ+NBdhJ6Xtely2eJ/I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dubai.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\kaapstad.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/kaapstad#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k5rg56hv3o",
+      "Integrity": "iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI+mUTas=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kaapstad.jpg"
+    },
+    {
       "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\logo.png",
       "SourceId": "FlightEase",
       "SourceType": "Discovered",
@@ -1422,6 +1443,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\londen.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/londen#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "unl3nxsdxx",
+      "Integrity": "aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\londen.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\new_york.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/new_york#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bhw6fo4iwf",
+      "Integrity": "EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\new_york.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/singapore#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "20g89bnyqo",
+      "Integrity": "/lcVQ1oL+8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\singapore.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\sydney.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/sydney#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ttze5j52mj",
+      "Integrity": "HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sydney.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\tokio.jpg",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/tokio#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rdyfsqg8g6",
+      "Integrity": "MWBnVqdYZk+PzEa1vCkThFDP251y2JzPZGdHS6vwfzc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tokio.jpg"
     },
     {
       "Identity": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\js\\site.js",
@@ -2644,8 +2770,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/home.css",
-      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "Route": "css/site.5roecne6y6.css",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2654,7 +2780,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "547"
+          "Value": "488"
         },
         {
           "Name": "Content-Type",
@@ -2662,48 +2788,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EFnY9FhE23+Lv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs=\""
+          "Value": "\"0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI+sC/fDJNI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 19:20:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EFnY9FhE23+Lv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.g0adz89y4q.css",
-      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EFnY9FhE23+Lv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 19:20:20 GMT"
+          "Value": "Sun, 23 Feb 2025 01:57:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2713,15 +2802,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g0adz89y4q"
+          "Value": "5roecne6y6"
         },
         {
           "Name": "label",
-          "Value": "css/home.css"
+          "Value": "css/site.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EFnY9FhE23+Lv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs="
+          "Value": "sha256-0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI+sC/fDJNI="
         }
       ]
     },
@@ -2736,7 +2825,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "417"
+          "Value": "488"
         },
         {
           "Name": "Content-Type",
@@ -2744,11 +2833,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA=\""
+          "Value": "\"0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI+sC/fDJNI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 20:42:29 GMT"
+          "Value": "Sun, 23 Feb 2025 01:57:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2758,52 +2847,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.d0v7up98vm.css",
-      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "417"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 20:42:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d0v7up98vm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA="
+          "Value": "sha256-0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI+sC/fDJNI="
         }
       ]
     },
@@ -5356,6 +5400,170 @@
       ]
     },
     {
+      "Route": "images/dubai.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\dubai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "238369"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZPPnijiI6oeGvRTSZlNPsVcqDQ+NBdhJ6Xtely2eJ/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:01:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZPPnijiI6oeGvRTSZlNPsVcqDQ+NBdhJ6Xtely2eJ/I="
+        }
+      ]
+    },
+    {
+      "Route": "images/dubai.s4rhpotqwt.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\dubai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "238369"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZPPnijiI6oeGvRTSZlNPsVcqDQ+NBdhJ6Xtely2eJ/I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:01:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s4rhpotqwt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/dubai.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZPPnijiI6oeGvRTSZlNPsVcqDQ+NBdhJ6Xtely2eJ/I="
+        }
+      ]
+    },
+    {
+      "Route": "images/kaapstad.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\kaapstad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1131304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI+mUTas=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:05:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI+mUTas="
+        }
+      ]
+    },
+    {
+      "Route": "images/kaapstad.k5rg56hv3o.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\kaapstad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1131304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI+mUTas=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:05:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k5rg56hv3o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/kaapstad.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI+mUTas="
+        }
+      ]
+    },
+    {
       "Route": "images/logo.m260a0qtu2.png",
       "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\logo.png",
       "Selectors": [],
@@ -5434,6 +5642,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-vkirkP6wRmBMDEbhU1/fx9JRpRsSyLJjySQTgzO0C1Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/londen.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\londen.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1058782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 21:54:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA="
+        }
+      ]
+    },
+    {
+      "Route": "images/londen.unl3nxsdxx.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\londen.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1058782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 21:54:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "unl3nxsdxx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/londen.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA="
+        }
+      ]
+    },
+    {
+      "Route": "images/new_york.bhw6fo4iwf.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\new_york.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "330218"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:04:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bhw6fo4iwf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/new_york.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto="
+        }
+      ]
+    },
+    {
+      "Route": "images/new_york.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\new_york.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "330218"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:04:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto="
+        }
+      ]
+    },
+    {
+      "Route": "images/singapore.20g89bnyqo.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1404150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lcVQ1oL+8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:04:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "20g89bnyqo"
+        },
+        {
+          "Name": "label",
+          "Value": "images/singapore.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lcVQ1oL+8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI="
+        }
+      ]
+    },
+    {
+      "Route": "images/singapore.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1404150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/lcVQ1oL+8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:04:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/lcVQ1oL+8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI="
+        }
+      ]
+    },
+    {
+      "Route": "images/sydney.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\sydney.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "230880"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:01:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I="
+        }
+      ]
+    },
+    {
+      "Route": "images/sydney.ttze5j52mj.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\sydney.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "230880"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 22:01:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttze5j52mj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sydney.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I="
+        }
+      ]
+    },
+    {
+      "Route": "images/tokio.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\tokio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "287306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MWBnVqdYZk+PzEa1vCkThFDP251y2JzPZGdHS6vwfzc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 21:58:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MWBnVqdYZk+PzEa1vCkThFDP251y2JzPZGdHS6vwfzc="
+        }
+      ]
+    },
+    {
+      "Route": "images/tokio.rdyfsqg8g6.jpg",
+      "AssetFile": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\wwwroot\\images\\tokio.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "287306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MWBnVqdYZk+PzEa1vCkThFDP251y2JzPZGdHS6vwfzc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Feb 2025 21:58:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rdyfsqg8g6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/tokio.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MWBnVqdYZk+PzEa1vCkThFDP251y2JzPZGdHS6vwfzc="
         }
       ]
     },

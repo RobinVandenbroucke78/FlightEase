@@ -1,8 +1,14 @@
-wwwroot\css\home.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\banner.jpeg
+wwwroot\images\dubai.jpg
+wwwroot\images\kaapstad.jpg
 wwwroot\images\logo.png
+wwwroot\images\londen.jpg
+wwwroot\images\new_york.jpg
+wwwroot\images\singapore.jpg
+wwwroot\images\sydney.jpg
+wwwroot\images\tokio.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

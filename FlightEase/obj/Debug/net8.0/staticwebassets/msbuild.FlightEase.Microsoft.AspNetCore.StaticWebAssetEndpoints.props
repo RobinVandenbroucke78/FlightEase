@@ -1,28 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/FlightEase/css/home.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\home.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.5roecne6y6.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EFnY9FhE23\u002BLv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"547"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EFnY9FhE23\u002BLv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 19:20:20 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/FlightEase/css/home.g0adz89y4q.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\home.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"g0adz89y4q"},{"Name":"integrity","Value":"sha256-EFnY9FhE23\u002BLv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs="},{"Name":"label","Value":"_content/FlightEase/css/home.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"547"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EFnY9FhE23\u002BLv3FshY3ZzKATDwMjj35Fx5ZMHcRjHfs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 19:20:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5roecne6y6"},{"Name":"integrity","Value":"sha256-0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI\u002BsC/fDJNI="},{"Name":"label","Value":"_content/FlightEase/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"488"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI\u002BsC/fDJNI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 23 Feb 2025 01:57:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"417"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 20:42:29 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.d0v7up98vm.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d0v7up98vm"},{"Name":"integrity","Value":"sha256-vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA="},{"Name":"label","Value":"_content/FlightEase/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"417"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vQqBOp5DHSEAvvdqz19BfZfRqiIf5xOdBRnRybDtpdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 20:42:29 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI\u002BsC/fDJNI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"488"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220RxFIGbx1UMikHEwjjKZSghUGlT9arYZXI\u002BsC/fDJNI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 23 Feb 2025 01:57:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -60,6 +48,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3948"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QWvPt4zJxgxKW2TxpySAIpGzGsUW0jQ9aMurJDKT728=\u0022"},{"Name":"Last-Modified","Value":"Fri, 21 Feb 2025 17:00:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/dubai.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\dubai.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZPPnijiI6oeGvRTSZlNPsVcqDQ\u002BNBdhJ6Xtely2eJ/I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"238369"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ZPPnijiI6oeGvRTSZlNPsVcqDQ\u002BNBdhJ6Xtely2eJ/I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:01:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/dubai.s4rhpotqwt.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\dubai.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s4rhpotqwt"},{"Name":"integrity","Value":"sha256-ZPPnijiI6oeGvRTSZlNPsVcqDQ\u002BNBdhJ6Xtely2eJ/I="},{"Name":"label","Value":"_content/FlightEase/images/dubai.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"238369"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ZPPnijiI6oeGvRTSZlNPsVcqDQ\u002BNBdhJ6Xtely2eJ/I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:01:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/kaapstad.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\kaapstad.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI\u002BmUTas="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1131304"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI\u002BmUTas=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:05:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/kaapstad.k5rg56hv3o.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\kaapstad.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k5rg56hv3o"},{"Name":"integrity","Value":"sha256-iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI\u002BmUTas="},{"Name":"label","Value":"_content/FlightEase/images/kaapstad.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131304"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022iEVnprALMJG9qvzfyM6dZn8XgKmSkMCXsFjxI\u002BmUTas=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:05:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/images/logo.m260a0qtu2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -71,6 +83,66 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vkirkP6wRmBMDEbhU1/fx9JRpRsSyLJjySQTgzO0C1Y="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"124963"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vkirkP6wRmBMDEbhU1/fx9JRpRsSyLJjySQTgzO0C1Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 20:32:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/londen.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\londen.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1058782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 21:54:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/londen.unl3nxsdxx.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\londen.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"unl3nxsdxx"},{"Name":"integrity","Value":"sha256-aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA="},{"Name":"label","Value":"_content/FlightEase/images/londen.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1058782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022aitjawMsoSxlLxt3qrfa1UhG2cGrQ2BcBPSzMnptjUA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 21:54:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/new_york.bhw6fo4iwf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\new_york.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bhw6fo4iwf"},{"Name":"integrity","Value":"sha256-EYdCaABA1y/R0oGvqh4D2Fa\u002ByXIa/6QRG2bf6XdAnto="},{"Name":"label","Value":"_content/FlightEase/images/new_york.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"330218"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022EYdCaABA1y/R0oGvqh4D2Fa\u002ByXIa/6QRG2bf6XdAnto=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:04:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/new_york.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\new_york.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EYdCaABA1y/R0oGvqh4D2Fa\u002ByXIa/6QRG2bf6XdAnto="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"330218"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022EYdCaABA1y/R0oGvqh4D2Fa\u002ByXIa/6QRG2bf6XdAnto=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:04:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/singapore.20g89bnyqo.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\singapore.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"20g89bnyqo"},{"Name":"integrity","Value":"sha256-/lcVQ1oL\u002B8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI="},{"Name":"label","Value":"_content/FlightEase/images/singapore.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1404150"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022/lcVQ1oL\u002B8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:04:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/singapore.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\singapore.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/lcVQ1oL\u002B8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1404150"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022/lcVQ1oL\u002B8uk8yyiOMWPXhW3m/mu8rG18c8ak6nUloI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:04:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/sydney.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\sydney.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"230880"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:01:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/sydney.ttze5j52mj.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\sydney.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ttze5j52mj"},{"Name":"integrity","Value":"sha256-HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I="},{"Name":"label","Value":"_content/FlightEase/images/sydney.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"230880"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HzIRAs0dcPeeVGC9UhS54rnVGGjRZ0JMbbXSDC/n72I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 22:01:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/tokio.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\tokio.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MWBnVqdYZk\u002BPzEa1vCkThFDP251y2JzPZGdHS6vwfzc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"287306"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022MWBnVqdYZk\u002BPzEa1vCkThFDP251y2JzPZGdHS6vwfzc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 21:58:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/images/tokio.rdyfsqg8g6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\tokio.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rdyfsqg8g6"},{"Name":"integrity","Value":"sha256-MWBnVqdYZk\u002BPzEa1vCkThFDP251y2JzPZGdHS6vwfzc="},{"Name":"label","Value":"_content/FlightEase/images/tokio.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"287306"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022MWBnVqdYZk\u002BPzEa1vCkThFDP251y2JzPZGdHS6vwfzc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 21:58:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
