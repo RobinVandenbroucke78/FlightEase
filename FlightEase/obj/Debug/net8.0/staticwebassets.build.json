@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wFuVQueivSjqEOh2gxQdegPtZX846fpikKaeWhFOp7c=",
+  "Hash": "9qyygyRsbqcDf0zaw4HEYwnVLsdXqLsplBb0cMyQzU0=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "to7qud6cof",
-      "Integrity": "bTs382gojHFjAXuKkwCWLF879tYu/w5llgHEl/FjBHQ=",
+      "Fingerprint": "1hnyfjnp6o",
+      "Integrity": "qwnI18ltdkHxd2BI7hlf63EhG3p9WQ1LUM9TmtbGzQ4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
@@ -2791,6 +2791,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/home.1hnyfjnp6o.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qwnI18ltdkHxd2BI7hlf63EhG3p9WQ1LUM9TmtbGzQ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Feb 2025 14:36:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1hnyfjnp6o"
+        },
+        {
+          "Name": "label",
+          "Value": "css/home.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qwnI18ltdkHxd2BI7hlf63EhG3p9WQ1LUM9TmtbGzQ4="
+        }
+      ]
+    },
+    {
       "Route": "css/home.css",
       "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
       "Selectors": [],
@@ -2801,7 +2846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "67"
+          "Value": "97"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"bTs382gojHFjAXuKkwCWLF879tYu/w5llgHEl/FjBHQ=\""
+          "Value": "\"qwnI18ltdkHxd2BI7hlf63EhG3p9WQ1LUM9TmtbGzQ4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 14:33:27 GMT"
+          "Value": "Mon, 24 Feb 2025 14:36:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,52 +2868,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-bTs382gojHFjAXuKkwCWLF879tYu/w5llgHEl/FjBHQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/home.to7qud6cof.css",
-      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"bTs382gojHFjAXuKkwCWLF879tYu/w5llgHEl/FjBHQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 14:33:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "to7qud6cof"
-        },
-        {
-          "Name": "label",
-          "Value": "css/home.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-bTs382gojHFjAXuKkwCWLF879tYu/w5llgHEl/FjBHQ="
+          "Value": "sha256-qwnI18ltdkHxd2BI7hlf63EhG3p9WQ1LUM9TmtbGzQ4="
         }
       ]
     },
