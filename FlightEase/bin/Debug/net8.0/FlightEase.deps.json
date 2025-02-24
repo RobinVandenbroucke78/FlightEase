@@ -2246,7 +2246,7 @@
         },
         "runtime": {
           "FlightEase.Domains.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -2258,7 +2258,7 @@
         },
         "runtime": {
           "FlightEase.Repositories.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -2270,7 +2270,7 @@
         },
         "runtime": {
           "FlightEase.Services.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
