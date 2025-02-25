@@ -1,0 +1,85 @@
+﻿.hero {
+    background: url('/path/to/your/image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: row; /* Stack fields horizontally */
+}
+
+    .locations label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333; /* Darker color for better contrast */
+    }
+
+    .locations select, .locations input {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc; /* Light border */
+        font-size: 14px;
+        transition: border 0.3s ease;
+    }
+
+        .locations select:focus, .locations input:focus {
+            border: 1px solid #007bff; /* Highlight border on focus */
+            outline: none; /* Remove default outline */
+        }
+
+    .locations button {
+        padding: 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+        .locations button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+@media (max-width: 600px) {
+    .hero {
+        height: auto;
+        padding: 40px 20px; /* Additional padding for smaller screens */
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .search-options {
+        flex-direction: column; /* Stack search options vertically on small screens */
+    }
+}

@@ -1,0 +1,56 @@
+﻿@* 
+@if (User.Identity.IsAuthenticated)
+{
+    <a href="/Tickets/Buy">Buy Tickets</a>
+    //rest van de code
+}
+else
+{
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 85vh; font-size: large">
+        <p>You need to <a href="/Identity/Account/Login">log in</a> to buy tickets.</p>
+    </div>
+    
+} *@
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/flight.css" />
+}
+
+<body>
+    <section class="hero">
+        <div class="search-box">
+                <div class="search-options">
+                    <select>
+                        <option>Retour</option>
+                        <option>Enkele reis</option>
+                    </select>
+                    <select>
+                        <option>Economy, 1 reiziger</option>
+                        <option>Business, 1 reiziger</option>
+                    </select>
+                </div>
+                <div class="locations">
+                    <select>
+                        <option>New York</option>
+                        <option>Londen</option>
+                        <option>Tokio</option>
+                        <option>Dubai</option>
+                        <option>Kaapstad</option>
+                        <option>Sydney</option>
+                        <option>Singapore</option>
+                    </select>
+                    <select>
+                        <option>New York</option>
+                        <option>Londen</option>
+                        <option>Tokio</option>
+                        <option>Dubai</option>
+                        <option>Kaapstad</option>
+                        <option>Sydney</option>
+                        <option>Singapore</option>
+                    </select>
+                    <input type="date" id="date">
+                    <button type="submit">Zoeken</button>
+                </div>
+        </div>
+    </section>
+</body>

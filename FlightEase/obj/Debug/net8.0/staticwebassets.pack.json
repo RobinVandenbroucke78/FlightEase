@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FlightEase.summwudpt2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
+      "PackagePath": "staticwebassets\\css\\flight.css"
+    },
+    {
       "Id": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },

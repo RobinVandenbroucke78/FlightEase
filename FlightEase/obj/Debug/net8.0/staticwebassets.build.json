@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9qyygyRsbqcDf0zaw4HEYwnVLsdXqLsplBb0cMyQzU0=",
+  "Hash": "jSjCamwSdibaWZRX/Kaa8xMznV9G/H0Gv0vlAk6JEeY=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1317,6 +1317,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FlightEase.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "css/flight#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2aonuoagp",
+      "Integrity": "+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\flight.css"
     },
     {
       "Identity": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
@@ -2790,6 +2811,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/flight.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2091"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Feb 2025 15:34:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4="
+        }
+      ]
+    },
+    {
+      "Route": "css/flight.u2aonuoagp.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2091"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Feb 2025 15:34:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2aonuoagp"
+        },
+        {
+          "Name": "label",
+          "Value": "css/flight.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4="
+        }
+      ]
+    },
     {
       "Route": "css/home.1hnyfjnp6o.css",
       "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\home.css",
