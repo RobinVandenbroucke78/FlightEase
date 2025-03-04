@@ -17,7 +17,7 @@ else
 }
 
 <body>
-    <section class="hero">
+    @* <section class="hero">
         <div class="search-box">
                 <div class="search-options">
                     <select>
@@ -52,5 +52,14 @@ else
                     <button type="submit">Zoeken</button>
                 </div>
         </div>
-    </section>
+    </section> *@
+    
 </body>
+
+@* 
+<div class="row background">
+    @foreach (var item in Model)
+    {
+        @await Html.PartialAsync("DisplayTemplates/_TileView")
+    }
+</div> *@

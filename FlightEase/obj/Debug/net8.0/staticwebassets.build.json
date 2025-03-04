@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jSjCamwSdibaWZRX/Kaa8xMznV9G/H0Gv0vlAk6JEeY=",
+  "Hash": "7eE0wKcZl5xgeVpHoQ7Sktktbvq4EU6ilWOvDCEZVgI=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1527,6 +1527,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\new_york.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\shoppingcart.png",
+      "SourceId": "FlightEase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\",
+      "BasePath": "_content/FlightEase",
+      "RelativePath": "images/shoppingcart#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k8s846b966",
+      "Integrity": "9IywwIG2Trp8aRZl66rFBvLhVt3zd7zBpOBeAQ/Smac=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\shoppingcart.png"
     },
     {
       "Identity": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
@@ -6012,6 +6033,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-EYdCaABA1y/R0oGvqh4D2Fa+yXIa/6QRG2bf6XdAnto="
+        }
+      ]
+    },
+    {
+      "Route": "images/shoppingcart.k8s846b966.png",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\shoppingcart.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2594"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9IywwIG2Trp8aRZl66rFBvLhVt3zd7zBpOBeAQ/Smac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 10:06:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k8s846b966"
+        },
+        {
+          "Name": "label",
+          "Value": "images/shoppingcart.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9IywwIG2Trp8aRZl66rFBvLhVt3zd7zBpOBeAQ/Smac="
+        }
+      ]
+    },
+    {
+      "Route": "images/shoppingcart.png",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\shoppingcart.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2594"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9IywwIG2Trp8aRZl66rFBvLhVt3zd7zBpOBeAQ/Smac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 10:06:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9IywwIG2Trp8aRZl66rFBvLhVt3zd7zBpOBeAQ/Smac="
         }
       ]
     },

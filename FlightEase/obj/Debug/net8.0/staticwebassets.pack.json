@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\new_york.jpg"
     },
     {
+      "Id": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\shoppingcart.png",
+      "PackagePath": "staticwebassets\\images\\shoppingcart.png"
+    },
+    {
       "Id": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\images\\singapore.jpg",
       "PackagePath": "staticwebassets\\images\\singapore.jpg"
     },

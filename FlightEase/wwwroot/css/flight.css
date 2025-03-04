@@ -83,3 +83,40 @@
         flex-direction: column; /* Stack search options vertically on small screens */
     }
 }
+
+/*This section is for the TileView*/
+.ticket {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+    font-family: Arial, sans-serif;
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.ticket-details {
+    flex: 3;
+    padding-right: 15px;
+}
+
+.ticket-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+    .ticket-section p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+        .ticket-section p.bold {
+            font-weight: bold;
+            color: black;
+        }

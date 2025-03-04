@@ -8,6 +8,7 @@ wwwroot\images\kaapstad.jpg
 wwwroot\images\logo.png
 wwwroot\images\londen.jpg
 wwwroot\images\new_york.jpg
+wwwroot\images\shoppingcart.png
 wwwroot\images\singapore.jpg
 wwwroot\images\sydney.jpg
 wwwroot\images\tokio.jpg
