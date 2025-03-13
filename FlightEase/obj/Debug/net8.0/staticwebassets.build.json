@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7eE0wKcZl5xgeVpHoQ7Sktktbvq4EU6ilWOvDCEZVgI=",
+  "Hash": "JxLlRpdMNw3QDA24BeMVtYf2WsH8dja8HWSGKAVvnt0=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u2aonuoagp",
-      "Integrity": "+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=",
+      "Fingerprint": "4vc8kvwfwf",
+      "Integrity": "ICP03iJoXnZR0txYFHgz31lNn2F6bSGFC4iJWLz+QT4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\flight.css"
@@ -2833,6 +2833,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/flight.4vc8kvwfwf.css",
+      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ICP03iJoXnZR0txYFHgz31lNn2F6bSGFC4iJWLz+QT4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 10:23:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4vc8kvwfwf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/flight.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ICP03iJoXnZR0txYFHgz31lNn2F6bSGFC4iJWLz+QT4="
+        }
+      ]
+    },
+    {
       "Route": "css/flight.css",
       "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
       "Selectors": [],
@@ -2843,7 +2888,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2091"
+          "Value": "2824"
         },
         {
           "Name": "Content-Type",
@@ -2851,11 +2896,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=\""
+          "Value": "\"ICP03iJoXnZR0txYFHgz31lNn2F6bSGFC4iJWLz+QT4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 15:34:45 GMT"
+          "Value": "Tue, 04 Mar 2025 10:23:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2865,52 +2910,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4="
-        }
-      ]
-    },
-    {
-      "Route": "css/flight.u2aonuoagp.css",
-      "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2091"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Feb 2025 15:34:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u2aonuoagp"
-        },
-        {
-          "Name": "label",
-          "Value": "css/flight.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+ge2ckNhj/zjbv9qcwfUG8rHPxAEiejpy37aFVYbho4="
+          "Value": "sha256-ICP03iJoXnZR0txYFHgz31lNn2F6bSGFC4iJWLz+QT4="
         }
       ]
     },
