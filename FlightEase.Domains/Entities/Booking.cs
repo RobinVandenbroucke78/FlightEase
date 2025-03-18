@@ -7,7 +7,9 @@ public partial class Booking
 {
     public int BookingId { get; set; }
 
-    public int FlightId { get; set; }
+    public string UserId { get; set; } = null!;
+
+    public int TicketId { get; set; }
 
     public DateTime BookingDate { get; set; }
 
@@ -15,5 +17,7 @@ public partial class Booking
 
     public double Price { get; set; }
 
-    public virtual Flight Flight { get; set; } = null!;
+    public virtual Ticket Ticket { get; set; } = null!;
+
+    public virtual AspNetUser User { get; set; } = null!;
 }

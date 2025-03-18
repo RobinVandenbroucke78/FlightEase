@@ -7,14 +7,6 @@ public partial class Flight
 {
     public int FlightId { get; set; }
 
-    public string? Name { get; set; }
-
-    public string? FirstName { get; set; }
-
-    public double Price { get; set; }
-
-    public string SeatName { get; set; } = null!;
-
     public string GateName { get; set; } = null!;
 
     public DateTime DepartureTime { get; set; }
@@ -33,8 +25,6 @@ public partial class Flight
 
     public int SeasonId { get; set; }
 
-    public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
-
     public virtual ClassType ClassType { get; set; } = null!;
 
     public virtual Airport FromAirport { get; set; } = null!;
@@ -42,6 +32,8 @@ public partial class Flight
     public virtual Meal Meal { get; set; } = null!;
 
     public virtual Season Season { get; set; } = null!;
+
+    public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 
     public virtual Airport ToAirport { get; set; } = null!;
 
