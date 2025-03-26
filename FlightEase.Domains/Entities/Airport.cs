@@ -15,5 +15,7 @@ public partial class Airport
 
     public virtual ICollection<Flight> FlightToAirports { get; set; } = new List<Flight>();
 
-    public virtual ICollection<Transfer> Transfers { get; set; } = new List<Transfer>();
+    public virtual ICollection<Transfer> TransferFirstAirports { get; set; } = new List<Transfer>();
+
+    public virtual ICollection<Transfer> TransferSecondAirports { get; set; } = new List<Transfer>();
 }

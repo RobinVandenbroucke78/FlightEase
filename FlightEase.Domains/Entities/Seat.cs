@@ -3,13 +3,11 @@ using System.Collections.Generic;
 
 namespace FlightEase.Domains.Entities;
 
-public partial class Meal
+public partial class Seat
 {
-    public int MealId { get; set; }
+    public int SeatId { get; set; }
 
-    public string MealName { get; set; } = null!;
-
-    public string MealDescription { get; set; } = null!;
+    public string SeatNumber { get; set; } = null!;
 
     public double Price { get; set; }
 

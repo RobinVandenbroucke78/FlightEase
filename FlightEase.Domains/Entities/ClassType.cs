@@ -13,5 +13,5 @@ public partial class ClassType
 
     public double PricePerSeats { get; set; }
 
-    public virtual ICollection<Flight> Flights { get; set; } = new List<Flight>();
+    public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 }

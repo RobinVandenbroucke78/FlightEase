@@ -42,6 +42,8 @@ public partial class FlightDbContext : DbContext
 
     public virtual DbSet<Season> Seasons { get; set; }
 
+    public virtual DbSet<Seat> Seats { get; set; }
+
     public virtual DbSet<Ticket> Tickets { get; set; }
 
     public virtual DbSet<Transfer> Transfers { get; set; }
@@ -194,36 +196,18 @@ public partial class FlightDbContext : DbContext
 
             entity.Property(e => e.FlightId).HasColumnName("FlightID");
             entity.Property(e => e.ArrivalTime).HasColumnType("datetime");
-            entity.Property(e => e.ClassTypeId).HasColumnName("ClassTypeID");
             entity.Property(e => e.DepartureTime).HasColumnType("datetime");
             entity.Property(e => e.FromAirportId).HasColumnName("FromAirportID");
             entity.Property(e => e.GateName)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.MealId).HasColumnName("MealID");
-            entity.Property(e => e.SeasonId).HasColumnName("SeasonID");
             entity.Property(e => e.ToAirportId).HasColumnName("ToAirportID");
             entity.Property(e => e.TransferId).HasColumnName("TransferID");
-
-            entity.HasOne(d => d.ClassType).WithMany(p => p.Flights)
-                .HasForeignKey(d => d.ClassTypeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Flight_ClassType");
 
             entity.HasOne(d => d.FromAirport).WithMany(p => p.FlightFromAirports)
                 .HasForeignKey(d => d.FromAirportId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Flight_Airport3");
-
-            entity.HasOne(d => d.Meal).WithMany(p => p.Flights)
-                .HasForeignKey(d => d.MealId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Flight_Meal");
-
-            entity.HasOne(d => d.Season).WithMany(p => p.Flights)
-                .HasForeignKey(d => d.SeasonId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Flight_Season");
 
             entity.HasOne(d => d.ToAirport).WithMany(p => p.FlightToAirports)
                 .HasForeignKey(d => d.ToAirportId)
@@ -261,18 +245,50 @@ public partial class FlightDbContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Seat>(entity =>
+        {
+            entity.ToTable("Seat");
+
+            entity.Property(e => e.SeatId).HasColumnName("SeatID");
+            entity.Property(e => e.SeatNumber).HasMaxLength(50);
+        });
+
         modelBuilder.Entity<Ticket>(entity =>
         {
             entity.ToTable("Ticket");
 
             entity.Property(e => e.TicketId).HasColumnName("TicketID");
+            entity.Property(e => e.ClassTypeId).HasColumnName("ClassTypeID");
             entity.Property(e => e.FlightId).HasColumnName("FlightID");
+            entity.Property(e => e.MealId).HasColumnName("MealID");
+            entity.Property(e => e.SeasonId).HasColumnName("SeasonID");
+            entity.Property(e => e.SeatId).HasColumnName("SeatID");
             entity.Property(e => e.SeatNumber).HasMaxLength(50);
+
+            entity.HasOne(d => d.ClassType).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.ClassTypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Ticket_ClassType");
 
             entity.HasOne(d => d.Flight).WithMany(p => p.Tickets)
                 .HasForeignKey(d => d.FlightId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Ticket_Flight");
+
+            entity.HasOne(d => d.Meal).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.MealId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Ticket_Meal");
+
+            entity.HasOne(d => d.Season).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.SeasonId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Ticket_Season");
+
+            entity.HasOne(d => d.Seat).WithMany(p => p.Tickets)
+                .HasForeignKey(d => d.SeatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Ticket_Seat");
         });
 
         modelBuilder.Entity<Transfer>(entity =>
@@ -282,12 +298,17 @@ public partial class FlightDbContext : DbContext
             entity.Property(e => e.TransferId)
                 .ValueGeneratedNever()
                 .HasColumnName("TransferID");
-            entity.Property(e => e.AirportId).HasColumnName("AirportID");
+            entity.Property(e => e.FirstAirportId).HasColumnName("FirstAirportID");
+            entity.Property(e => e.SecondAirportId).HasColumnName("SecondAirportID");
 
-            entity.HasOne(d => d.Airport).WithMany(p => p.Transfers)
-                .HasForeignKey(d => d.AirportId)
+            entity.HasOne(d => d.FirstAirport).WithMany(p => p.TransferFirstAirports)
+                .HasForeignKey(d => d.FirstAirportId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Transfer_Airport");
+
+            entity.HasOne(d => d.SecondAirport).WithMany(p => p.TransferSecondAirports)
+                .HasForeignKey(d => d.SecondAirportId)
+                .HasConstraintName("FK_Transfer_Airport1");
         });
 
         OnModelCreatingPartial(modelBuilder);

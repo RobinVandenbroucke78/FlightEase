@@ -19,19 +19,11 @@ public partial class Flight
 
     public int TransferId { get; set; }
 
-    public int MealId { get; set; }
+    public double Price { get; set; }
 
-    public int ClassTypeId { get; set; }
-
-    public int SeasonId { get; set; }
-
-    public virtual ClassType ClassType { get; set; } = null!;
+    public int AvailableSeats { get; set; }
 
     public virtual Airport FromAirport { get; set; } = null!;
-
-    public virtual Meal Meal { get; set; } = null!;
-
-    public virtual Season Season { get; set; } = null!;
 
     public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
 
