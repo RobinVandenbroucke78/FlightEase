@@ -1,4 +1,9 @@
 using FlightEase.Data;
+using FlightEase.Domains.Entities;
+using FlightEase.Repositories;
+using FlightEase.Repositories.Interfaces;
+using FlightEase.Services;
+using FlightEase.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +20,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//services
+builder.Services.AddTransient<IDAO<Flight>, FlightDAO>();
+builder.Services.AddTransient<IService<Flight>, FlightService>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
