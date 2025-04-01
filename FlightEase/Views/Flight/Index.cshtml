@@ -7,11 +7,12 @@
 
 @section Styles {
     <link rel="stylesheet" href="~/css/flight.css" />
+    <!--<link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />-->
 }
 
 @if (User.Identity.IsAuthenticated)
 {
-    <table class="table">
+    <table class="table" id="myTable">
         <thead>
             <tr>
                 <th>
@@ -82,9 +83,7 @@
                         @Html.DisplayFor(modelItem => item.AvailableSeats)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        <img src="~/images/shoppingcart.png" alt="Alternate Text" />
                     </td>
                 </tr>
             }
@@ -95,3 +94,15 @@ else
 {
     @await Html.PartialAsync("DisplayTemplates/_TileView")
 }
+
+@* @section Scripts
+       {
+
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script>
+        //Shorthand for $( document ).ready() --> $( function )
+        $(() => {
+            $('#myTable').DataTable();
+        });
+    </script>
+} *@

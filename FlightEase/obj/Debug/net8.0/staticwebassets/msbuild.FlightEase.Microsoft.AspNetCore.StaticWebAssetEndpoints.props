@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wdsl4eqc10"},{"Name":"integrity","Value":"sha256-9J7\u002B3KE0NM5fHG58fkd\u002BFEmrNN3SXsds/G\u002BU8\u002BhHSmg="},{"Name":"label","Value":"_content/FlightEase/css/home.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229J7\u002B3KE0NM5fHG58fkd\u002BFEmrNN3SXsds/G\u002BU8\u002BhHSmg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:50:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.26e3pt1un4.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"26e3pt1un4"},{"Name":"integrity","Value":"sha256-eke58N/vwNAKWBk9Xhf5fc67XPr\u002BO9nIlELNvLhwgYQ="},{"Name":"label","Value":"_content/FlightEase/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"531"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eke58N/vwNAKWBk9Xhf5fc67XPr\u002BO9nIlELNvLhwgYQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:49:52 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eke58N/vwNAKWBk9Xhf5fc67XPr\u002BO9nIlELNvLhwgYQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"531"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022eke58N/vwNAKWBk9Xhf5fc67XPr\u002BO9nIlELNvLhwgYQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 08:49:52 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LiL3as5VAW7jIsJiKWt0M6V4WYbvVD9niXt94t3phzw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LiL3as5VAW7jIsJiKWt0M6V4WYbvVD9niXt94t3phzw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:23:14 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/css/site.y0vjub9999.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y0vjub9999"},{"Name":"integrity","Value":"sha256-LiL3as5VAW7jIsJiKWt0M6V4WYbvVD9niXt94t3phzw="},{"Name":"label","Value":"_content/FlightEase/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"498"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LiL3as5VAW7jIsJiKWt0M6V4WYbvVD9niXt94t3phzw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:23:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -731,6 +731,90 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"81b7ukuj9c"},{"Name":"integrity","Value":"sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ\u002BVSYilIiEQu8ilnvqk="},{"Name":"label","Value":"_content/FlightEase/lib/bootstrap/LICENSE"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1153"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022ZH6pA6BSx6fuHZvdaKph1DwUJ\u002BVSYilIiEQu8ilnvqk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 24 Feb 2025 14:29:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/css/jquery.datatables.min.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\css\jquery.datatables.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NsjPUPa1DUo51N8aw3uVf4ygtyEBB8DzDAfH2eRJTUs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"13892"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NsjPUPa1DUo51N8aw3uVf4ygtyEBB8DzDAfH2eRJTUs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/css/jquery.datatables.min.e2q9soyr7p.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\css\jquery.datatables.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e2q9soyr7p"},{"Name":"integrity","Value":"sha256-NsjPUPa1DUo51N8aw3uVf4ygtyEBB8DzDAfH2eRJTUs="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/css/jquery.datatables.min.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13892"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NsjPUPa1DUo51N8aw3uVf4ygtyEBB8DzDAfH2eRJTUs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_asc.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_asc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WVcEw/PPTLZcfZyFCKmedIDhUAlUc/rtMaB8IbEzibg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"160"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022WVcEw/PPTLZcfZyFCKmedIDhUAlUc/rtMaB8IbEzibg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_asc.tb3mdwjjyp.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_asc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tb3mdwjjyp"},{"Name":"integrity","Value":"sha256-WVcEw/PPTLZcfZyFCKmedIDhUAlUc/rtMaB8IbEzibg="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/images/sort_asc.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"160"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022WVcEw/PPTLZcfZyFCKmedIDhUAlUc/rtMaB8IbEzibg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_asc_disabled.2ardtfk7fw.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_asc_disabled.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2ardtfk7fw"},{"Name":"integrity","Value":"sha256-pluPT4TWQnqBw2AoL8U5TVG/mdraXxWeaqD848OWglw="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/images/sort_asc_disabled.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022pluPT4TWQnqBw2AoL8U5TVG/mdraXxWeaqD848OWglw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_asc_disabled.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_asc_disabled.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pluPT4TWQnqBw2AoL8U5TVG/mdraXxWeaqD848OWglw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022pluPT4TWQnqBw2AoL8U5TVG/mdraXxWeaqD848OWglw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_both.air2rz2q5l.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_both.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"air2rz2q5l"},{"Name":"integrity","Value":"sha256-PgFsI65RQXOCtkCuLRnrSAR1MsN61TiUvRhVhlWcz/s="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/images/sort_both.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"201"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022PgFsI65RQXOCtkCuLRnrSAR1MsN61TiUvRhVhlWcz/s=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_both.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_both.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PgFsI65RQXOCtkCuLRnrSAR1MsN61TiUvRhVhlWcz/s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"201"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022PgFsI65RQXOCtkCuLRnrSAR1MsN61TiUvRhVhlWcz/s=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_desc.krfgnlfo4n.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_desc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"krfgnlfo4n"},{"Name":"integrity","Value":"sha256-0I7Q4h8YfdMJAw1GUiTagIURmhWhfWFroOR3u1DG8Q0="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/images/sort_desc.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"158"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00220I7Q4h8YfdMJAw1GUiTagIURmhWhfWFroOR3u1DG8Q0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_desc.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_desc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0I7Q4h8YfdMJAw1GUiTagIURmhWhfWFroOR3u1DG8Q0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"158"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00220I7Q4h8YfdMJAw1GUiTagIURmhWhfWFroOR3u1DG8Q0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_desc_disabled.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_desc_disabled.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bA8MGyHvaAcFevyN3BqSXR29IcsR6ScOyE/0rEDZo/o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"146"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022bA8MGyHvaAcFevyN3BqSXR29IcsR6ScOyE/0rEDZo/o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/images/sort_desc_disabled.swt4jbawiz.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\images\sort_desc_disabled.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"swt4jbawiz"},{"Name":"integrity","Value":"sha256-bA8MGyHvaAcFevyN3BqSXR29IcsR6ScOyE/0rEDZo/o="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/images/sort_desc_disabled.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"146"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022bA8MGyHvaAcFevyN3BqSXR29IcsR6ScOyE/0rEDZo/o=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/js/jquery.datatables.min.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\js\jquery.datatables.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/7zo27Ll/hVKhCsE\u002By8m2SS5bhFPEQFheTCL87HuumA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"84647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/7zo27Ll/hVKhCsE\u002By8m2SS5bhFPEQFheTCL87HuumA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FlightEase/lib/datatables/js/jquery.datatables.min.rd57uehf8c.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\js\jquery.datatables.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rd57uehf8c"},{"Name":"integrity","Value":"sha256-/7zo27Ll/hVKhCsE\u002By8m2SS5bhFPEQFheTCL87HuumA="},{"Name":"label","Value":"_content/FlightEase/lib/datatables/js/jquery.datatables.min.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"84647"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/7zo27Ll/hVKhCsE\u002By8m2SS5bhFPEQFheTCL87HuumA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 09:31:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'))</AssetFile>

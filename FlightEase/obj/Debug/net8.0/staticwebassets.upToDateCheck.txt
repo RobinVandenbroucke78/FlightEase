@@ -58,6 +58,13 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\datatables\css\jquery.datatables.min.css
+wwwroot\lib\datatables\images\sort_asc.png
+wwwroot\lib\datatables\images\sort_asc_disabled.png
+wwwroot\lib\datatables\images\sort_both.png
+wwwroot\lib\datatables\images\sort_desc.png
+wwwroot\lib\datatables\images\sort_desc_disabled.png
+wwwroot\lib\datatables\js\jquery.datatables.min.js
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
