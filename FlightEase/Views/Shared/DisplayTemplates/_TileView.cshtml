@@ -1,43 +1,16 @@
 ﻿@section Styles {
     <link rel="stylesheet" href="~/css/flight.css" />
 }
-@if (Model != null)
-{
-    <div class="ticket">
-        <div class="ticket-details">
-            <div class="ticket-section">
-                <div>
-                    <p>Departure</p>
-                    <p class="bold">Amsterdam (AMS)</p>
-                </div>
-                <div>
-                    <p>Arrival</p>
-                    <p class="bold">London (LHR)</p>
-                </div>
-            </div>
 
-            <div class="ticket-section">
-                <div>
-                    <p>Date</p>
-                    <p class="bold">10 March 2025</p>
-                </div>
-                <div>
-                    <p>Time</p>
-                    <p class="bold">14:30</p>
-                </div>
-            </div>
-
-            <div class="ticket-section">
-                <div>
-                    <p>Seat</p>
-                    <p class="bold">12A</p>
-                </div>
-                <div>
-                    <p>Gate</p>
-                    <p class="bold">B7</p>
-                </div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h1>You are not logged in</h1>
+            <p>Please register or login to book a flight</p>
+            <div class="mt-3">
+                <a href="/Identity/Account/Register" class="btn btn-primary mr-2">Register</a>
+                <a href="/Identity/Account/Login" class="btn btn-secondary">Login</a>
             </div>
         </div>
     </div>
-}
-
+</div>
