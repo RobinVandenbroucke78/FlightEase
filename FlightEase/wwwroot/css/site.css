@@ -27,5 +27,9 @@ header, footer {
 }
 
 .form-floating {
-    color: black;
+    color: white;
+}
+
+table {
+    color: white;
 }

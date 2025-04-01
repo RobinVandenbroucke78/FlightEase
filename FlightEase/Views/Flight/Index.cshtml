@@ -1,65 +1,93 @@
-﻿@* 
-@if (User.Identity.IsAuthenticated)
-{
-    <a href="/Tickets/Buy">Buy Tickets</a>
-    //rest van de code
+﻿@model IEnumerable<FlightEase.ViewModels.FlightVM>
+
+@{
+    ViewData["Title"] = "Index";
 }
-else
-{
-    <div class="d-flex justify-content-center align-items-center" style="min-height: 85vh; font-size: large">
-        <p>You need to <a href="/Identity/Account/Login">log in</a> to buy tickets.</p>
-    </div>
-    
-} *@
+
+<h1>Index</h1>
 
 @section Styles {
     <link rel="stylesheet" href="~/css/flight.css" />
 }
 
-<body>
-    @* <section class="hero">
-        <div class="search-box">
-                <div class="search-options">
-                    <select>
-                        <option>Retour</option>
-                        <option>Enkele reis</option>
-                    </select>
-                    <select>
-                        <option>Economy, 1 reiziger</option>
-                        <option>Business, 1 reiziger</option>
-                    </select>
-                </div>
-                <div class="locations">
-                    <select>
-                        <option>New York</option>
-                        <option>Londen</option>
-                        <option>Tokio</option>
-                        <option>Dubai</option>
-                        <option>Kaapstad</option>
-                        <option>Sydney</option>
-                        <option>Singapore</option>
-                    </select>
-                    <select>
-                        <option>New York</option>
-                        <option>Londen</option>
-                        <option>Tokio</option>
-                        <option>Dubai</option>
-                        <option>Kaapstad</option>
-                        <option>Sydney</option>
-                        <option>Singapore</option>
-                    </select>
-                    <input type="date" id="date">
-                    <button type="submit">Zoeken</button>
-                </div>
-        </div>
-    </section> *@
-    
-</body>
-
-@* 
-<div class="row background">
-    @foreach (var item in Model)
-    {
-        @await Html.PartialAsync("DisplayTemplates/_TileView")
-    }
-</div> *@
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FlightId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromAirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToAirportName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstTransferName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondTransferName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailableSeats)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GateName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromAirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToAirportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstTransferName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondTransferName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableSeats)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

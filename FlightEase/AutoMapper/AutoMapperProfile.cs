@@ -9,9 +9,10 @@ namespace FlightEase.AutoMapper
         public AutoMapperProfile()
         {
             CreateMap<Flight, FlightVM>()
-                .ForMember(dest => dest.FromAirport, opt => opt.MapFrom(src => src.FromAirport.City))
-                .ForMember(dest => dest.ToAirport, opt => opt.MapFrom(src => src.ToAirport.City))
-                .ForMember(dest => dest.Transfer, opt => opt.MapFrom(src => src.Transfer.FirstAirport.City));
+                .ForMember(dest => dest.FromAirportName, opt => opt.MapFrom(src => src.FromAirport.City.CityName))
+                .ForMember(dest => dest.ToAirportName, opt => opt.MapFrom(src => src.ToAirport.City.CityName))
+                .ForMember(dest => dest.FirstTransferName, opt => opt.MapFrom(src => src.Transfer.FirstAirport.City.CityName))
+                .ForMember(dest => dest.SecondTransferName, opt => opt.MapFrom(src => src.Transfer.SecondAirport.City.CityName));
         }
     }
 }

@@ -1,4 +1,5 @@
 using FlightEase.Data;
+using FlightEase.Domains.Data;
 using FlightEase.Domains.Entities;
 using FlightEase.Repositories;
 using FlightEase.Repositories.Interfaces;
@@ -13,17 +14,22 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<FlightDbContext>(options =>
+    options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 //services
 builder.Services.AddTransient<IDAO<Flight>, FlightDAO>();
 builder.Services.AddTransient<IService<Flight>, FlightService>();
+
+//Add automapper
+builder.Services.AddAutoMapper(typeof(Program));
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

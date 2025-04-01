@@ -39,9 +39,10 @@ namespace FlightEase.Repositories
             try
             {
                return await _context.Flights
-                    .Include(f => f.FromAirport)
-                    .Include(f => f.ToAirport)
-                    .Include(f => f.Transfer)
+                    .Include(f => f.FromAirport).ThenInclude(a => a.City)
+                    .Include(f => f.ToAirport).ThenInclude(a => a.City)
+                    .Include(f => f.Transfer).ThenInclude(t => t.FirstAirport).ThenInclude(a => a.City)
+                    .Include(f => f.Transfer).ThenInclude(t => t.SecondAirport).ThenInclude(a => a.City)
                     .ToListAsync();
             }
             catch (Exception ex)
