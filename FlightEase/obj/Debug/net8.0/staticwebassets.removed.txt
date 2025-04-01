@@ -1,7 +1,0 @@
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\css\jquery.datatables.min.css
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\images\sort_asc.png
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\images\sort_asc_disabled.png
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\images\sort_both.png
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\images\sort_desc.png
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\images\sort_desc_disabled.png
-C:\Users\robin\Desktop\FlightEase\FlightEase\wwwroot\datatables\js\jquery.datatables.min.js

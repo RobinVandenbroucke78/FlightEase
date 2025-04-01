@@ -9,36 +9,35 @@ using System.Threading.Tasks;
 
 namespace FlightEase.Services
 {
-    public class FlightService : IService<Flight>
+    public class MealService : IService<Meal>
     {
-        private readonly IDAO<Flight> _dao;
+        private readonly IDAO<Meal> _dao;
 
-        public FlightService(IDAO<Flight> dao)
+        public MealService(IDAO<Meal> dao)
         {
             _dao = dao;
         }
-
-        public Task AddAsync(Flight entity)
+        public Task AddAsync(Meal entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(Flight entity)
+        public Task DeleteAsync(Meal entity)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<Flight?> FindByIdAsync(int Id)
+        public Task<Meal?> FindByIdAsync(int Id)
         {
-            return await _dao.FindByIdAsync(Id);
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Flight>?> GetAllAsync()
+        public async Task<IEnumerable<Meal>?> GetAllAsync()
         {
             return await _dao.GetAllAsync();
         }
 
-        public Task UpdateAsync(Flight entity)
+        public Task UpdateAsync(Meal entity)
         {
             throw new NotImplementedException();
         }

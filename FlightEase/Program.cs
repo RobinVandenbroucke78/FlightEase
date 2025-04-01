@@ -25,9 +25,34 @@ builder.Services.AddControllersWithViews();
 //services
 builder.Services.AddTransient<IDAO<Flight>, FlightDAO>();
 builder.Services.AddTransient<IService<Flight>, FlightService>();
+//Ticket
+builder.Services.AddTransient<IDAO<Ticket>, TicketDAO>();
+builder.Services.AddTransient<IService<Ticket>, TicketService>();
+//Season
+builder.Services.AddTransient<IDAO<Season>, SeasonDAO>();
+builder.Services.AddTransient<IService<Season>, SeasonService>();
+//ClassType
+builder.Services.AddTransient<IDAO<ClassType>, ClassTypeDAO>();
+builder.Services.AddTransient<IService<ClassType>, ClassTypeService>();
+//Meal
+builder.Services.AddTransient<IDAO<Meal>, MealDAO>();
+builder.Services.AddTransient<IService<Meal>, MealService>();
+//Seat
+builder.Services.AddTransient<IDAO<Seat>, SeatDAO>();
+builder.Services.AddTransient<IService<Seat>, SeatService>();
+
 
 //Add automapper
 builder.Services.AddAutoMapper(typeof(Program));
+
+//session
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "be.VIVES.Session";
+    //3 minuten
+    options.IdleTimeout = TimeSpan.FromMinutes(3);
+});
+
 
 var app = builder.Build();
 
@@ -47,6 +72,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+//add session
+app.UseSession();
 
 app.UseAuthorization();
 

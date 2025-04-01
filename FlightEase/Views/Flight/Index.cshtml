@@ -83,8 +83,14 @@
                         @Html.DisplayFor(modelItem => item.AvailableSeats)
                     </td>
                     <td>
-                        <img src="~/images/shoppingcart.png" alt="Alternate Text" />
+                        @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.FlightId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.FlightId }) |
+                        <a href="@Url.Action("Select", "Flight", new { flightId = item.FlightId })">
+                            <img src="~/images/shoppingCart.png" alt="Add to Cart" />
+                        </a>
                     </td>
+
                 </tr>
             }
         </tbody>
