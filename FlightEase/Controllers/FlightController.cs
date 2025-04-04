@@ -4,6 +4,7 @@ using FlightEase.Extentions;
 using FlightEase.Services.Interfaces;
 using FlightEase.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FlightEase.Controllers
 {
@@ -48,21 +49,39 @@ namespace FlightEase.Controllers
         }
 
         //ShoppingCart
-        public async Task<IActionResult> Select(int? flightId)
+        public async Task<IActionResult> Select(int flightId)
         {
-            if(!flightId.HasValue)
-            {
-                return NotFound();
-            }
-
-            var flight = await _flightService.FindByIdAsync(flightId.Value);
+            var flight = await _flightService.FindByIdAsync(flightId);
             
             if (flight == null)
             {
                 return NotFound();
             }
 
-            var shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart") ?? new ShoppingCartVM { Tickets = new List<TicketVM>() };
+            ShoppingCartVM shoppingCartVM = new ShoppingCartVM();
+            shoppingCartVM.ClassTypes = new SelectList(
+                await _classTypeService.GetAllAsync(),
+                "ClassTypeId",
+                "ClassName"
+            );
+            shoppingCartVM.Meals = new SelectList(
+                await _mealService.GetAllAsync(),
+                "MealId",
+                "MealName"
+            );
+            shoppingCartVM.Seasons = new SelectList(
+                await _seasonService.GetAllAsync(),
+                "SeasonId",
+                "SeasonName"
+            );
+            shoppingCartVM.Seats = new SelectList(
+                await _seatService.GetAllAsync(),
+                "SeatId",
+                "SeatName"
+            );
+
+
+            shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart") ?? new ShoppingCartVM { Tickets = new List<TicketVM>() };
 
             var existingTicket = shoppingCartVM.Tickets.FirstOrDefault(t => t.FlightId == flightId);
 
@@ -74,7 +93,7 @@ namespace FlightEase.Controllers
             {
                 shoppingCartVM.Tickets.Add(new TicketVM
                 {
-                    FlightId = flightId.Value,
+                    FlightId = flight.FlightId,
                     ClassTypes = null,
                     Meals = null,
                     Seasons = null,

@@ -47,27 +47,36 @@
             </tr>
             @for (var i = 0; i < Model.Tickets.Count; i++)
             {
-
-                <tr>
-                    @Html.HiddenFor(m => Model.Tickets[i].FlightId)
-                    <td>
-                        <input asp-for="@Model.Tickets[i].Price" readonly="readonly"
-                               class="form-control" />
-
-                    </td>
-                    <td>
-                    <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@(new SelectList(Model.ClassTypes, "ClassTypeId", "ClassName"))"></select>
+                <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].FlightId)
                 </td>
                 <td>
-                    <select asp-for="@Model.Tickets[i].Meals" asp-items="@(new SelectList(Model.Meals, "MealId", "MealName"))"></select>
+                    <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
                 </td>
                 <td>
-                    <select asp-for="@Model.Tickets[i].Seats" asp-items="@(new SelectList(Model.Seats, "SeatId", "SeatNumber"))"></select>
+                    @Html.DisplayFor(m => Model.Tickets[i].Price)
                 </td>
                 <td>
-                    <select asp-for="@Model.Tickets[i].Seasons" asp-items="@(new SelectList(Model.Seasons, "SeasonId", "Name"))"></select>
+                    <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
+                        <option>Please select one</option>
+                    </select>
                 </td>
-                </tr>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                
             }
         </table>
     </form>

@@ -1,4 +1,5 @@
 ﻿using FlightEase.Domains.Entities;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
 namespace FlightEase.ViewModels
@@ -6,10 +7,11 @@ namespace FlightEase.ViewModels
     public class ShoppingCartVM
     {
         public List<TicketVM> Tickets { get; set; } = new List<TicketVM>();
-        public List<ClassType> ClassTypes { get; set; } = new List<ClassType>();
-        public List<Meal> Meals { get; set; } = new List<Meal>();
-        public List<Seat> Seats { get; set; } = new List<Seat>();
-        public List<Season> Seasons { get; set; } = new List<Season>();
+        public IEnumerable<SelectListItem>? ClassTypes { get; set; }
+        public IEnumerable<SelectListItem>? Meals { get; set; }
+        public IEnumerable<SelectListItem>? Seats { get; set; }
+        public IEnumerable<SelectListItem>? Seasons { get; set; }
+
     }
 
     public class TicketVM
@@ -20,13 +22,13 @@ namespace FlightEase.ViewModels
 
         public double Price { get; set; }
 
-        public List<Seat>? Seats { get; set; }
+        public int? Seats { get; set; }
 
-        public List<Meal>? Meals { get; set; }
+        public int? Meals { get; set; }
 
-        public List<ClassType>? ClassTypes { get; set; }
+        public int? ClassTypes { get; set; }
 
-        public List<Season>? Seasons { get; set; }
+        public int? Seasons { get; set; }
 
         public System.DateTime IssueDate { get; set; }
 
