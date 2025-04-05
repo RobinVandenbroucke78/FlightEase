@@ -1110,8 +1110,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e2q9soyr7p</Fingerprint>
-      <Integrity>NsjPUPa1DUo51N8aw3uVf4ygtyEBB8DzDAfH2eRJTUs=</Integrity>
+      <Fingerprint>2j4zytelnm</Fingerprint>
+      <Integrity>rhdS06ynbfdQtVguAEN0+/q56pa7KQQsmBbtHmRL+x8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\css\jquery.datatables.min.css'))</OriginalItemSpec>
@@ -1218,8 +1218,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rd57uehf8c</Fingerprint>
-      <Integrity>/7zo27Ll/hVKhCsE+y8m2SS5bhFPEQFheTCL87HuumA=</Integrity>
+      <Fingerprint>zmri9uvecd</Fingerprint>
+      <Integrity>lVIioWa578quGxMKytNsmo/gfvJPsq289WcgmogwISk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\datatables\js\jquery.datatables.min.js'))</OriginalItemSpec>

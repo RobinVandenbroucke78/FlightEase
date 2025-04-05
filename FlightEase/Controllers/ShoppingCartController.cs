@@ -17,7 +17,10 @@ namespace FlightEase.Controllers
             if (shoppingCartVM == null)
             {
                 shoppingCartVM = new ShoppingCartVM();
+                return View(shoppingCartVM);
             }
+
+            // Ensure dropdowns are still populated
             return View(shoppingCartVM);
         }
     }

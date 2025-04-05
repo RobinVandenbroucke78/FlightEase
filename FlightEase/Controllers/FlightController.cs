@@ -52,37 +52,41 @@ namespace FlightEase.Controllers
         public async Task<IActionResult> Select(int flightId)
         {
             var flight = await _flightService.FindByIdAsync(flightId);
-            
+
             if (flight == null)
             {
                 return NotFound();
             }
 
-            ShoppingCartVM shoppingCartVM = new ShoppingCartVM();
+            // Get or create the shopping cart from session
+            ShoppingCartVM shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart") ?? new ShoppingCartVM { Tickets = new List<TicketVM>() };
+
+            // Set up the dropdown lists with correct property mappings
             shoppingCartVM.ClassTypes = new SelectList(
                 await _classTypeService.GetAllAsync(),
                 "ClassTypeId",
                 "ClassName"
             );
+
             shoppingCartVM.Meals = new SelectList(
                 await _mealService.GetAllAsync(),
                 "MealId",
                 "MealName"
             );
-            shoppingCartVM.Seasons = new SelectList(
-                await _seasonService.GetAllAsync(),
-                "SeasonId",
-                "SeasonName"
-            );
+
             shoppingCartVM.Seats = new SelectList(
                 await _seatService.GetAllAsync(),
                 "SeatId",
-                "SeatName"
+                "SeatNumber"
             );
 
+            shoppingCartVM.Seasons = new SelectList(
+                await _seasonService.GetAllAsync(),
+                "SeasonId",
+                "Name"
+            );
 
-            shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart") ?? new ShoppingCartVM { Tickets = new List<TicketVM>() };
-
+            // Add ticket to the cart or increment count if it already exists
             var existingTicket = shoppingCartVM.Tickets.FirstOrDefault(t => t.FlightId == flightId);
 
             if (existingTicket != null)
@@ -104,6 +108,7 @@ namespace FlightEase.Controllers
                 });
             }
 
+            // Save updated cart to session
             HttpContext.Session.SetObject("ShoppingCart", shoppingCartVM);
             return RedirectToAction("Index", "ShoppingCart");
         }
