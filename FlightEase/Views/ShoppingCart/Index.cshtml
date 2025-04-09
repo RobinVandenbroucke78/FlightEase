@@ -1,8 +1,5 @@
 ﻿@model FlightEase.ViewModels.ShoppingCartVM
-
 <h1>Shopping Cart</h1>
-
-
 @if (Model != null)
 {
     @if (Model?.Tickets?.Count() > 0)
@@ -16,7 +13,6 @@
                 </small>
             </div>
         </div>
-
     }
     <form asp-action="Payment">
         <table>
@@ -26,11 +22,9 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Tickets[0].Count)
-
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Tickets[0].Price)
-
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Tickets[0].ClassTypes)
@@ -47,38 +41,40 @@
             </tr>
             @for (var i = 0; i < Model.Tickets.Count; i++)
             {
-                <td>
+                <tr>
+                    <td>
                         @Html.DisplayFor(m => Model.Tickets[i].FlightId)
-                </td>
-                <td>
-                    <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
-                </td>
-                <td>
-                    @Html.DisplayFor(m => Model.Tickets[i].Price)
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                
+                    </td>
+                    <td>
+                        <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].Price)
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                </tr>
             }
         </table>
+        <button type="submit" class="btn btn-primary mt-3">Proceed to Payment</button>
     </form>
 }
 else
@@ -86,9 +82,7 @@ else
     @Html.Raw("Your shoppingcart is empty at the moment")
 }
 <a asp-controller="Flight" asp-action="Index"> Continue</a>
-
-@* script om het subtotaal aan te passen wanneer de count omhoog gaat *@
-@section Scripts{
+@section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
