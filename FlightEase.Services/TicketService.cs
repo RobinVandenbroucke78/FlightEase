@@ -17,9 +17,9 @@ namespace FlightEase.Services
         {
             _dao = dao;
         }
-        public Task AddAsync(Ticket entity)
+        public async Task AddAsync(Ticket entity)
         {
-            throw new NotImplementedException();
+            await _dao.AddAsync(entity);
         }
 
         public Task DeleteAsync(Ticket entity)

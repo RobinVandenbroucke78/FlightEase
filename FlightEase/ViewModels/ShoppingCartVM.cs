@@ -33,5 +33,9 @@ namespace FlightEase.ViewModels
         public System.DateTime IssueDate { get; set; }
 
         public int Count { get; set; }
+
+        //Flight Details
+        public string? FromAirport { get; set; }
+        public string? ToAirport { get; set; }
     }
 }

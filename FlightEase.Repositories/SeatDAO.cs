@@ -28,9 +28,19 @@ namespace FlightEase.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Seat?> FindByIdAsync(int Id)
+        public async Task<Seat?> FindByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.Seats
+                    .Where(s => s.SeatId == Id)
+                    .FirstOrDefaultAsync(s => s.SeatId == Id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error in Dao");
+                throw ex;
+            }
         }
 
         public async Task<IEnumerable<Seat>?> GetAllAsync()

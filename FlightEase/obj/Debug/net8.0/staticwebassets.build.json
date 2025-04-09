@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a5s9oJg5MwuCFo2B73b4vKjDcdFgiJB5ZmgALuTl+QU=",
+  "Hash": "LeN4kONiGJEdZEUc6uU1bC5f2+xK4guCqfpGNcxKVj8=",
   "Source": "FlightEase",
   "BasePath": "_content/FlightEase",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c0hpdpea81",
-      "Integrity": "pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=",
+      "Fingerprint": "7jucazc1yn",
+      "Integrity": "bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\flight.css"
@@ -2980,7 +2980,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/flight.c0hpdpea81.css",
+      "Route": "css/flight.7jucazc1yn.css",
       "AssetFile": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\wwwroot\\css\\flight.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2990,7 +2990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "65"
+          "Value": "69"
         },
         {
           "Name": "Content-Type",
@@ -2998,11 +2998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=\""
+          "Value": "\"bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:25:17 GMT"
+          "Value": "Wed, 09 Apr 2025 18:04:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3012,7 +3012,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c0hpdpea81"
+          "Value": "7jucazc1yn"
         },
         {
           "Name": "label",
@@ -3020,7 +3020,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI="
+          "Value": "sha256-bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU="
         }
       ]
     },
@@ -3035,7 +3035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "65"
+          "Value": "69"
         },
         {
           "Name": "Content-Type",
@@ -3043,11 +3043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=\""
+          "Value": "\"bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:25:17 GMT"
+          "Value": "Wed, 09 Apr 2025 18:04:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3057,7 +3057,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI="
+          "Value": "sha256-bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU="
         }
       ]
     },

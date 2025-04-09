@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c0hpdpea81</Fingerprint>
-      <Integrity>pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=</Integrity>
+      <Fingerprint>7jucazc1yn</Fingerprint>
+      <Integrity>bSRB204AYybHKCtfjafzVlm2e9jZ+9QUXWjtzkSLaYU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\flight.css'))</OriginalItemSpec>

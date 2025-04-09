@@ -1,4 +1,10 @@
 ﻿@model FlightEase.ViewModels.ShoppingCartVM
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/flight.css" />
+}
+
+
 <h1>Shopping Cart</h1>
 @if (Model != null)
 {
@@ -14,74 +20,100 @@
             </div>
         </div>
     }
-    <form asp-action="Payment">
-        <table>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].FlightId)
+            </th>
+            <th>
+                From
+            </th>
+            <th>
+                To
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].ClassTypes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].Meals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].Seats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickets[0].Seasons)
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+        @for (var i = 0; i < Model.Tickets.Count; i++)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].FlightId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].Count)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].Price)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].ClassTypes)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].Meals)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].Seats)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tickets[0].Seasons)
-                </th>
-            </tr>
-            @for (var i = 0; i < Model.Tickets.Count; i++)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(m => Model.Tickets[i].FlightId)
-                    </td>
-                    <td>
-                        <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
-                    </td>
-                    <td>
+                <td>
+                    @Html.DisplayFor(m => Model.Tickets[i].FlightId)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.Tickets[i].FromAirport)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.Tickets[i].ToAirport)
+                </td>
+                <form asp-action="ApproveTicket" asp-route-index="@i" method="post">
+                    <input type="hidden" asp-for="@Model.Tickets[i].FlightId" />
+                    <input type="hidden" asp-for="@Model.Tickets[i].FromAirport" />
+                    <input type="hidden" asp-for="@Model.Tickets[i].ToAirport" />
+                <td>
+                    <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
+                </td>
+                <td>
+                    <input type="hidden" asp-for="@Model.Tickets[i].Price" />
                         @Html.DisplayFor(m => Model.Tickets[i].Price)
-                    </td>
-                    <td>
-                        <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                </tr>
-            }
-        </table>
-        <button type="submit" class="btn btn-primary mt-3">Proceed to Payment</button>
-    </form>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
+                        <option>Please select one</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                    <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Cancel</a>
+                </td>
+                </form>
+            </tr>
+        }
+    </table>
+    <div class="d-flex justify-content-between mt-3">
+        <a asp-controller="Flight" asp-action="Index" class="btn btn-secondary">Continue Shopping</a>
+        <a asp-action="Payment" class="btn btn-primary">Proceed to Payment</a>
+    </div>
 }
 else
 {
-    @Html.Raw("Your shoppingcart is empty at the moment")
+    <div class="alert alert-info">Your shopping cart is empty at the moment</div>
+    <a asp-controller="Flight" asp-action="Index" class="btn btn-primary">Browse Flights</a>
 }
-<a asp-controller="Flight" asp-action="Index"> Continue</a>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

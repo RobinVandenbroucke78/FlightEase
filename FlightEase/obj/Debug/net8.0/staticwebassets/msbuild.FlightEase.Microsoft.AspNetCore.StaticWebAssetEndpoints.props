@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/FlightEase/css/flight.c0hpdpea81.css">
+    <StaticWebAssetEndpoint Include="_content/FlightEase/css/flight.7jucazc1yn.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\flight.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c0hpdpea81"},{"Name":"integrity","Value":"sha256-pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI="},{"Name":"label","Value":"_content/FlightEase/css/flight.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"65"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 13:25:17 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7jucazc1yn"},{"Name":"integrity","Value":"sha256-bSRB204AYybHKCtfjafzVlm2e9jZ\u002B9QUXWjtzkSLaYU="},{"Name":"label","Value":"_content/FlightEase/css/flight.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"69"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bSRB204AYybHKCtfjafzVlm2e9jZ\u002B9QUXWjtzkSLaYU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 18:04:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/css/flight.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\flight.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"65"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pEzZwGCg3wK52g2lKQXonTd4W0poTjEj8oxqNacN7aI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 13:25:17 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bSRB204AYybHKCtfjafzVlm2e9jZ\u002B9QUXWjtzkSLaYU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"69"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bSRB204AYybHKCtfjafzVlm2e9jZ\u002B9QUXWjtzkSLaYU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 18:04:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FlightEase/css/home.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\home.css'))</AssetFile>
