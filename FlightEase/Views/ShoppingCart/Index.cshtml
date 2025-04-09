@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="~/css/flight.css" />
 }
 
-
 <h1>Shopping Cart</h1>
 @if (Model != null)
 {
@@ -65,48 +64,76 @@
                 <td>
                     @Html.DisplayFor(m => Model.Tickets[i].ToAirport)
                 </td>
-                <form asp-action="ApproveTicket" asp-route-index="@i" method="post">
-                    <input type="hidden" asp-for="@Model.Tickets[i].FlightId" />
-                    <input type="hidden" asp-for="@Model.Tickets[i].FromAirport" />
-                    <input type="hidden" asp-for="@Model.Tickets[i].ToAirport" />
-                <td>
-                    <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
-                </td>
-                <td>
-                    <input type="hidden" asp-for="@Model.Tickets[i].Price" />
+                @if (!Model.Tickets[i].IsApproved)
+                {
+                    <form asp-action="ApproveTicket" asp-route-index="@i" method="post">
+                        <input type="hidden" asp-for="@Model.Tickets[i].FlightId" />
+                        <input type="hidden" asp-for="@Model.Tickets[i].FromAirport" />
+                        <input type="hidden" asp-for="@Model.Tickets[i].ToAirport" />
+                    <td>
+                        <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
+                    </td>
+                    <td>
+                        <input type="hidden" asp-for="@Model.Tickets[i].Price" />
+                            @Html.DisplayFor(m => Model.Tickets[i].Price)
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
+                            <option>Please select one</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                        <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Cancel</a>
+                    </td>
+                    </form>
+                }
+                else
+                {
+                    <!-- Display approved ticket with static text -->
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].Count)
+                    </td>
+                    <td>
                         @Html.DisplayFor(m => Model.Tickets[i].Price)
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
-                        <option>Please select one</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-success btn-sm">Approve</button>
-                    <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Cancel</a>
-                </td>
-                </form>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].ClassTypeText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].MealText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].SeatText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => Model.Tickets[i].SeasonText)
+                    </td>
+                    <td>
+                        <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Remove</a>
+                    </td>
+                }
             </tr>
         }
     </table>
     <div class="d-flex justify-content-between mt-3">
         <a asp-controller="Flight" asp-action="Index" class="btn btn-secondary">Continue Shopping</a>
-        <a asp-action="Payment" class="btn btn-primary">Proceed to Payment</a>
+        <a asp-action="FinalizeOrder" class="btn btn-primary">Finalize Order</a>
     </div>
 }
 else

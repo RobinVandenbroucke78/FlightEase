@@ -37,5 +37,14 @@ namespace FlightEase.ViewModels
         //Flight Details
         public string? FromAirport { get; set; }
         public string? ToAirport { get; set; }
+
+        //To present the chosen selected item
+        public string? ClassTypeText { get; set; }
+        public string? MealText { get; set; }
+        public string? SeasonText { get; set; }
+        public string? SeatText { get; set; }
+
+        //additional properties
+        public bool IsApproved { get; set; } = false;
     }
 }

@@ -28,9 +28,19 @@ namespace FlightEase.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Season?> FindByIdAsync(int Id)
+        public async Task<Season?> FindByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.Seasons
+                    .Where(c => c.SeasonId == Id)
+                    .FirstOrDefaultAsync(c => c.SeasonId == Id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error in Dao");
+                throw ex;
+            }
         }
 
         public async Task<IEnumerable<Season>?> GetAllAsync()

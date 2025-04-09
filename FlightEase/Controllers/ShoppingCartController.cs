@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using FlightEase.Extentions;
 using AutoMapper;
 using FlightEase.Services;
+using System.Net.Sockets;
 
 namespace FlightEase.Controllers
 {
@@ -19,17 +20,26 @@ namespace FlightEase.Controllers
         private readonly IService<Flight> _flightService;
         private readonly IService<Ticket> _ticketService;
         private readonly IService<Seat> _seatService;
+        private readonly IService<ClassType> _classTypeService;
+        private readonly IService<Meal> _mealService;
+        private readonly IService<Season> _seasonService;
         private readonly IMapper _mapper;
 
         public ShoppingCartController(
             IService<Flight> flightService,
             IService<Ticket> ticketService,
             IService<Seat> seatService,
+            IService<ClassType> classTypeService,
+            IService<Meal> mealService,
+            IService<Season> seasonService,
             IMapper mapper)
         {
             _flightService = flightService;
             _ticketService = ticketService;
             _seatService = seatService;
+            _classTypeService = classTypeService;
+            _mealService = mealService;
+            _seasonService = seasonService;
             _mapper = mapper;
         }
 
@@ -90,6 +100,11 @@ namespace FlightEase.Controllers
 
             // Get the ticket at the specified index
             var ticketVM = model.Tickets[index];
+            shoppingCartVM.Tickets[index] = ticketVM;
+            shoppingCartVM.Tickets[index].IsApproved = true;
+
+            //load data from dropdown
+            await LoadSelectedItems(shoppingCartVM.Tickets[index]);
 
             // Get the selected seat to retrieve the seat number
             var seat = await _seatService.FindByIdAsync(ticketVM.Seats ?? 0);
@@ -123,6 +138,34 @@ namespace FlightEase.Controllers
 
             TempData["SuccessMessage"] = "Ticket has been approved and created successfully!";
             return RedirectToAction("Index");
+        }
+
+        private async Task LoadSelectedItems(TicketVM ticket)
+        {
+            // Load text values for the selected dropdown items
+            if (ticket.ClassTypes.HasValue)
+            {
+                var classType = await _classTypeService.FindByIdAsync(ticket.ClassTypes.Value);
+                ticket.ClassTypeText = classType?.ClassName;
+            }
+
+            if (ticket.Meals.HasValue)
+            {
+                var meal = await _mealService.FindByIdAsync(ticket.Meals.Value);
+                ticket.MealText = meal?.MealName;
+            }
+
+            if (ticket.Seats.HasValue)
+            {
+                var seat = await _seatService.FindByIdAsync(ticket.Seats.Value);
+                ticket.SeatText = seat?.SeatNumber;
+            }
+
+            if (ticket.Seasons.HasValue)
+            {
+                var season = await _seasonService.FindByIdAsync(ticket.Seasons.Value);
+                ticket.SeasonText = season?.Name;
+            }
         }
     }
 }
