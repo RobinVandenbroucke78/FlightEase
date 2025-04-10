@@ -167,5 +167,12 @@ namespace FlightEase.Controllers
                 ticket.SeasonText = season?.Name;
             }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> FinalizeOrder()
+        {
+            return View();
+        }
     }
 }

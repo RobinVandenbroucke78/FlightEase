@@ -5,6 +5,10 @@ using FlightEase.Repositories;
 using FlightEase.Repositories.Interfaces;
 using FlightEase.Services;
 using FlightEase.Services.Interfaces;
+using FlightEase.Util.Mail.Interfaces;
+using FlightEase.Util.Mail;
+using FlightEase.Util.PDF.Interfaces;
+using FlightEase.Util.PDF;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -42,9 +46,14 @@ builder.Services.AddTransient<IService<Meal>, MealService>();
 builder.Services.AddTransient<IDAO<Seat>, SeatDAO>();
 builder.Services.AddTransient<IService<Seat>, SeatService>();
 
-//email confirmation
-builder.Services.AddTransient<IEmailSender, EmailSender>();
-builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
+//mail en pdf
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+// Configuration.GetSection("EmailSettings")) zal de instellingen opvragen uit de
+//AppSettings.json file en vervolgens wordt er een emailsettings - object
+//aangemaakt en de waarden worden geïnjecteerd in het object
+
+builder.Services.AddSingleton<IEmailSend, EmailSend>();
+builder.Services.AddSingleton<ICreatePDF, CreatePDF>();
 
 //Add automapper
 builder.Services.AddAutoMapper(typeof(Program));
