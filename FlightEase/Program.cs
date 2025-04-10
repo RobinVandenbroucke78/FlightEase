@@ -6,6 +6,7 @@ using FlightEase.Repositories.Interfaces;
 using FlightEase.Services;
 using FlightEase.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +42,9 @@ builder.Services.AddTransient<IService<Meal>, MealService>();
 builder.Services.AddTransient<IDAO<Seat>, SeatDAO>();
 builder.Services.AddTransient<IService<Seat>, SeatService>();
 
+//email confirmation
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
 
 //Add automapper
 builder.Services.AddAutoMapper(typeof(Program));

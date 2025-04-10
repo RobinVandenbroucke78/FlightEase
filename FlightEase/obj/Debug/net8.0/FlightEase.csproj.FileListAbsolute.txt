@@ -613,3 +613,6 @@ C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase\bin\Debug\net8.0
 C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\robin\Desktop\FlightEase\FlightEase\bin\Debug\net8.0\libman.json
+C:\Users\robin\Desktop\FlightEase\FlightEase\bin\Debug\net8.0\secrets.json
+C:\Users\robin\Desktop\FlightEase\FlightEase\bin\Debug\net8.0\SendGrid.dll
+C:\Users\robin\Desktop\FlightEase\FlightEase\bin\Debug\net8.0\StarkbankEcdsa.dll
