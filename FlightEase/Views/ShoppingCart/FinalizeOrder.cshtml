@@ -1,0 +1,64 @@
+﻿@model FlightEase.ViewModels.ShoppingCartVM
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Finalize Order";
+}
+
+<div class="container my-4">
+    <h1>Order Summary</h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Review your booking</h3>
+        </div>
+        <div class="card-body">
+            <h4>Approved Tickets</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Count</th>
+                        <th>Class</th>
+                        <th>Meal</th>
+                        <th>Seat</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ticket in Model.Tickets.Where(t => t.IsApproved))
+                    {
+                        <tr>
+                            <td>@ticket.FromAirport</td>
+                            <td>@ticket.ToAirport</td>
+                            <td>@ticket.Count</td>
+                            <td>@ticket.ClassTypeText</td>
+                            <td>@ticket.MealText</td>
+                            <td>@ticket.SeatText</td>
+                            <td>@ticket.Price.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" class="text-end"><strong>Total:</strong></td>
+                        <td>@Model.Tickets.Where(t => t.IsApproved).Sum(t => t.Price).ToString("C")</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="my-3" style="color: black">
+                <p><strong>Confirmation Email:</strong> @User.Identity?.Name</p>
+            </div>
+
+            <form asp-action="ConfirmOrder" method="post">
+                @Html.AntiForgeryToken()
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Index" class="btn btn-secondary">Back to Cart</a>
+                    <button type="submit" class="btn btn-success">Confirm and Pay</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

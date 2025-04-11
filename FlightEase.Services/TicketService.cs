@@ -27,9 +27,9 @@ namespace FlightEase.Services
             throw new NotImplementedException();
         }
 
-        public Task<Ticket?> FindByIdAsync(int Id)
+        public async Task<Ticket?> FindByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            return await _dao.FindByIdAsync(Id);
         }
 
         public async Task<IEnumerable<Ticket>?> GetAllAsync()

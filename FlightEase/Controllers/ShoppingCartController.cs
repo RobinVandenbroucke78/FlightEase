@@ -181,10 +181,26 @@ namespace FlightEase.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult FinalizeOrder()
+        {
+            // Get shopping cart from session
+            ShoppingCartVM? shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart");
+            if (shoppingCartVM == null || !shoppingCartVM.Tickets.Any(t => t.IsApproved))
+            {
+                TempData["ErrorMessage"] = "No approved tickets found to finalize order.";
+                return RedirectToAction("Index");
+            }
+
+            // Pass the cart to the view
+            return View(shoppingCartVM);
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize] // Ensure user is logged in
-        public async Task<IActionResult> FinalizeOrder()
+        public async Task<IActionResult> ConfirmOrder()
         {
             // Get shopping cart from session
             ShoppingCartVM? shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart");
@@ -199,7 +215,7 @@ namespace FlightEase.Controllers
 
             // Get current user ID
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var userEmail = User.Identity.Name;
+            var userEmail = User.Identity?.Name;
 
             if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(userEmail))
             {
@@ -236,41 +252,29 @@ namespace FlightEase.Controllers
                 try
                 {
                     // Send email
-                    var emailService = HttpContext.RequestServices.GetRequiredService<IEmailSend>();
                     string subject = "Your FlightEase Booking Confirmation";
                     string message = $@"
-                <h2>Thank you for your booking with FlightEase!</h2>
-                <p>Your booking has been confirmed. Please find attached your booking receipt.</p>
-                <p>Details:</p>
-                <ul>
-                    {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: {b.BookingName} - ${b.Price}</li>"))}
-                </ul>
-                <p>Total: ${bookings.Sum(b => b.Price)}</p>
-                <p>Thank you for choosing FlightEase for your travel needs!</p>
-            ";
+                        <h2>Thank you for your booking with FlightEase!</h2>
+                        <p>Your booking has been confirmed.</p>
+                        <p>Details:</p>
+                        <ul>
+                            {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: {b.BookingName} - ${b.Price}</li>"))}
+                        </ul>
+                        <p>Total: ${bookings.Sum(b => b.Price)}</p>
+                        <p>Thank you for choosing FlightEase for your travel needs!</p>
+";
 
-                    await emailService.SendEmailAsync(
-                        userEmail,
-                        subject,
-                        message
-                    );
+                    Console.WriteLine($"Attempting to send email to {userEmail}");
+                    await _emailService.SendEmailAsync(userEmail, subject, message);
+                    Console.WriteLine("Email sent successfully");
 
-                    // Remove approved tickets from cart or clear cart
-                    shoppingCartVM.Tickets.RemoveAll(t => t.IsApproved);
-                    if (shoppingCartVM.Tickets.Count == 0)
-                    {
-                        HttpContext.Session.Remove("ShoppingCart");
-                    }
-                    else
-                    {
-                        HttpContext.Session.SetObject("ShoppingCart", shoppingCartVM);
-                    }
 
-                    TempData["SuccessMessage"] = "Your order has been successfully finalized and a confirmation email has been sent.";
-                    return RedirectToAction("Index", "Home");
+                    // Rest of your code...
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine($"Email error: {ex.Message}");
+                    Console.WriteLine($"Stack trace: {ex.StackTrace}");
                     TempData["ErrorMessage"] = $"An error occurred while processing your order: {ex.Message}";
                     return RedirectToAction("Index");
                 }

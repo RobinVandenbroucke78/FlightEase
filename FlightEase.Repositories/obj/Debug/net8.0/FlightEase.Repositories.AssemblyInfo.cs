@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlightEase.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d94540ada745e6f12f27637fe31470cf1512f31d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f299aa96b59bdd12184ae12b242a84f39d6c0dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlightEase.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlightEase.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
