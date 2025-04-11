@@ -22,3 +22,7 @@ C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Ut
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\refint\FlightEase.Util.dll
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.pdb
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\ref\FlightEase.Util.dll
+C:\Users\robin\Desktop\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Domains.dll
+C:\Users\robin\Desktop\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Domains.pdb
+C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.csproj.AssemblyReference.cache
+C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEa.C0F58488.Up2Date

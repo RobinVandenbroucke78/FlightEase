@@ -45,6 +45,9 @@ builder.Services.AddTransient<IService<Meal>, MealService>();
 //Seat
 builder.Services.AddTransient<IDAO<Seat>, SeatDAO>();
 builder.Services.AddTransient<IService<Seat>, SeatService>();
+//Booking
+builder.Services.AddTransient<IDAO<Booking>, BookingDAO>();
+builder.Services.AddTransient<IService<Booking>, BookingService>();
 
 //mail en pdf
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
