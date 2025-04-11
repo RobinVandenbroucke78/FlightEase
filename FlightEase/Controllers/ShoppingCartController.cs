@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authorization;
 using FlightEase.Util.Mail.Interfaces;
 using FlightEase.Util.PDF.Interfaces;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace FlightEase.Controllers
 {
@@ -31,6 +32,8 @@ namespace FlightEase.Controllers
         private readonly IEmailSend _emailService;
         private readonly ICreatePDF _pdfService;
         private readonly IMapper _mapper;
+        private readonly UserManager<IdentityUser> _userManager;
+
 
         public ShoppingCartController(
             IService<Flight> flightService,
@@ -42,7 +45,8 @@ namespace FlightEase.Controllers
             IService<Booking> bookingService,
             IEmailSend emailService,
             ICreatePDF pdfService,
-            IMapper mapper)
+            IMapper mapper,
+            UserManager<IdentityUser> userManager)
         {
             _flightService = flightService;
             _ticketService = ticketService;
@@ -54,6 +58,7 @@ namespace FlightEase.Controllers
             _emailService = emailService;
             _pdfService = pdfService;
             _mapper = mapper;
+            _userManager = userManager;
         }
 
         public async Task<IActionResult> Index()
@@ -214,14 +219,8 @@ namespace FlightEase.Controllers
             var approvedTickets = shoppingCartVM.Tickets.Where(t => t.IsApproved).ToList();
 
             // Get current user ID
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userId = _userManager.GetUserId(User);
             var userEmail = User.Identity?.Name;
-
-            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(userEmail))
-            {
-                TempData["ErrorMessage"] = "User information not found. Please login again.";
-                return RedirectToAction("Login", "Account", new { area = "Identity" });
-            }
 
             List<Booking> bookings = new List<Booking>();
 
@@ -235,7 +234,7 @@ namespace FlightEase.Controllers
                 // Create booking
                 var booking = new Booking
                 {
-                    UserId = userId,
+                    UserId = userId.,
                     TicketId = ticket.TicketId,
                     BookingDate = DateTime.Now,
                     BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
