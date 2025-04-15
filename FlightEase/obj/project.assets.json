@@ -12335,23 +12335,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robin\\.nuget\\packages\\": {},
+    "C:\\Users\\jarne\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\FlightEase.csproj",
+      "projectUniqueName": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\FlightEase.csproj",
       "projectName": "FlightEase",
-      "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\FlightEase.csproj",
-      "packagesPath": "C:\\Users\\robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase\\obj\\",
+      "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\FlightEase.csproj",
+      "packagesPath": "C:\\Users\\jarne\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jarne\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -12360,20 +12360,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj": {
-              "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj"
+            "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj": {
+              "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Domains\\FlightEase.Domains.csproj"
             },
-            "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Services\\FlightEase.Services.csproj": {
-              "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Services\\FlightEase.Services.csproj"
+            "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Services\\FlightEase.Services.csproj": {
+              "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Services\\FlightEase.Services.csproj"
             },
-            "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Util\\FlightEase.Util.csproj": {
-              "projectPath": "C:\\Users\\robin\\Desktop\\FlightEase\\FlightEase.Util\\FlightEase.Util.csproj"
+            "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Util\\FlightEase.Util.csproj": {
+              "projectPath": "C:\\Users\\jarne\\Documents\\School\\2024_2025\\FlightEase\\FlightEase.Util\\FlightEase.Util.csproj"
             }
           }
         }
@@ -12458,7 +12459,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

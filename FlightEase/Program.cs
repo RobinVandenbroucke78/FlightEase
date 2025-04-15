@@ -27,6 +27,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+//Hotel
+builder.Services.AddScoped<IHotelService, HotelService>();
+
 //services
 builder.Services.AddTransient<IDAO<Flight>, FlightDAO>();
 builder.Services.AddTransient<IService<Flight>, FlightService>();

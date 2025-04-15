@@ -26,3 +26,7 @@ C:\Users\robin\Desktop\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Do
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Domains.pdb
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.csproj.AssemblyReference.cache
 C:\Users\robin\Desktop\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEa.C0F58488.Up2Date
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Domains.dll
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\bin\Debug\net8.0\FlightEase.Domains.pdb
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEase.Util.csproj.AssemblyReference.cache
+C:\Users\jarne\Documents\School\2024_2025\FlightEase\FlightEase.Util\obj\Debug\net8.0\FlightEa.C0F58488.Up2Date

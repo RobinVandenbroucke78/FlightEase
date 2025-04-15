@@ -1,0 +1,54 @@
+﻿@model IEnumerable<FlightEase.ViewModels.HotelVM>
+
+@{
+    ViewData["Title"] = "Hotels";
+}
+
+<h1>Hotels</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressVM.CountryCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeoCodeVM.Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeoCodeVM.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdate)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressVM.CountryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeoCodeVM.Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeoCodeVM.Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdate)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

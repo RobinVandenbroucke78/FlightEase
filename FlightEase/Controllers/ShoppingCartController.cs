@@ -234,7 +234,7 @@ namespace FlightEase.Controllers
                 // Create booking
                 var booking = new Booking
                 {
-                    UserId = userId.,
+                    UserId = userId,
                     TicketId = ticket.TicketId,
                     BookingDate = DateTime.Now,
                     BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
