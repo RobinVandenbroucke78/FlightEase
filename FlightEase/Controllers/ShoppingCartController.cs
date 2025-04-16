@@ -17,6 +17,8 @@ using FlightEase.Util.Mail.Interfaces;
 using FlightEase.Util.PDF.Interfaces;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using NuGet.Protocol;
+using Org.BouncyCastle.Bcpg;
 
 namespace FlightEase.Controllers
 {
@@ -149,6 +151,7 @@ namespace FlightEase.Controllers
             for (int i = 0; i < ticketVM.Count; i++)
             {
                 await _ticketService.AddAsync(newTicket);
+                //Console.WriteLine($"Added ticket is: {newTicket.TicketId}");
             }
 
             // Save updated cart to session
@@ -204,98 +207,146 @@ namespace FlightEase.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize] // Ensure user is logged in
+        [Authorize]
         public async Task<IActionResult> ConfirmOrder()
         {
-            // Get shopping cart from session
-            ShoppingCartVM? shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart");
-            if (shoppingCartVM == null || !shoppingCartVM.Tickets.Any(t => t.IsApproved))
-            {
-                TempData["ErrorMessage"] = "No approved tickets found to finalize order.";
-                return RedirectToAction("Index");
-            }
-
-            // Get approved tickets
-            var approvedTickets = shoppingCartVM.Tickets.Where(t => t.IsApproved).ToList();
-
-            // Get current user ID
-            var userId = _userManager.GetUserId(User);
-            var userEmail = User.Identity?.Name;
-
-            List<Booking> bookings = new List<Booking>();
-
             try
             {
-                // Create bookings for each approved ticket
+                // Get shopping cart from session
+                ShoppingCartVM? shoppingCartVM = HttpContext.Session.GetObject<ShoppingCartVM>("ShoppingCart");
+                if (shoppingCartVM == null || !shoppingCartVM.Tickets.Any(t => t.IsApproved))
+                {
+                    TempData["ErrorMessage"] = "No approved tickets found to finalize order.";
+                    return RedirectToAction("Index");
+                }
+
+
+                // Get approved tickets
+                var approvedTickets = shoppingCartVM.Tickets.Where(t => t.IsApproved).ToList();
+
+                // Get current user ID
+                string? userId = _userManager.GetUserId(User);
+                string? userEmail = User.Identity?.Name;
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    Console.WriteLine("User ID is null or empty");
+                    TempData["ErrorMessage"] = "User information could not be retrieved. Please try again or log in.";
+                    return RedirectToAction("Index");
+                }
+
+                List<Booking> bookings = new List<Booking>();
+
+                // Process each ticket
                 foreach (var ticketVM in approvedTickets)
                 {
-                    // Find the ticket in database
-                    var ticket = await _ticketService.FindByIdAsync(ticketVM.TicketId);
-                    if (ticket != null && userId != null)
+                    try
                     {
-                        // Create booking
-                        var booking = new Booking
-                        {
-                            UserId = userId,
-                            TicketId = ticket.TicketId,
-                            BookingDate = DateTime.Now,
-                            BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
-                            Price = ticket.Price
-                        };
+                        // Find the ticket in database
+                        Ticket? ticket = await GetMostRecentTicketAsync(ticketVM);
 
-                        // Add to database
-                        await _bookingService.AddAsync(booking);
-                        bookings.Add(booking);
+                        if (ticket != null)
+                        {
+                            try
+                            {
+                                // Create booking
+                                var booking = new Booking
+                                {
+                                    UserId = userId,
+                                    TicketId = ticket.TicketId,
+                                    BookingDate = DateTime.Now,
+                                    BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
+                                    Price = ticket.Price
+                                };
+
+                                // Add to database
+                                await _bookingService.AddAsync(booking);
+                                bookings.Add(booking);
+                                Console.WriteLine($"Created booking for ticket ID: {ticket.TicketId}");
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error creating booking: {ex.Message}");
+                            }
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Console.WriteLine($"Ticket not found or user ID is null: TicketId={ticketVM.TicketId}, UserId={userId}");
+                        Console.WriteLine($"Error processing ticket: {ex.Message}");
+                    }
+                }
+
+                // Send email if bookings were created
+                if (bookings.Count > 0)
+                {
+                    try
+                    {
+                        // Send email
+                        string subject = "Your FlightEase Booking Confirmation";
+                        string message = $@"
+                    <h2>Thank you for your booking with FlightEase!</h2>
+                    <p>Your booking has been confirmed.</p>
+                    <p>Details:</p>
+                    <ul>
+                        {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: {b.BookingName} - ${b.Price}</li>"))}
+                    </ul>
+                    <p>Total: ${bookings.Sum(b => b.Price)}</p>
+                    <p>Thank you for choosing FlightEase for your travel needs!</p>
+                ";
+
+                        Console.WriteLine($"Attempting to send email to {userEmail}");
+                        await _emailService.SendEmailAsync(userEmail, subject, message);
+                        Console.WriteLine("Email sent successfully");
+
+                        // Clear the shopping cart
+                        HttpContext.Session.Remove("ShoppingCart");
+
+                        TempData["SuccessMessage"] = "Your order has been placed successfully!";
+                        return RedirectToAction("Index", "Home");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Email error: {ex.Message}");
+                        Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                        TempData["ErrorMessage"] = $"An error occurred while sending confirmation email: {ex.Message}";
                         return RedirectToAction("Index");
                     }
                 }
+
+                TempData["ErrorMessage"] = "No bookings were created. Please check the logs for details.";
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error getting user ID: {ex.Message}");
-                TempData["ErrorMessage"] = "An error occurred while processing your order. Please try again.";
+                Console.WriteLine($"Unhandled error in ConfirmOrder: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                TempData["ErrorMessage"] = "An unexpected error occurred. Please try again.";
                 return RedirectToAction("Index");
             }
-            
-            if (bookings.Count > 0)
+        }
+
+
+        //Get most recent ticket
+        private async Task<Ticket?> GetMostRecentTicketAsync(TicketVM ticketVM)
+        {
+            try
             {
-                try
-                {
-                    // Send email
-                    string subject = "Your FlightEase Booking Confirmation";
-                    string message = $@"
-                        <h2>Thank you for your booking with FlightEase!</h2>
-                        <p>Your booking has been confirmed.</p>
-                        <p>Details:</p>
-                        <ul>
-                            {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: {b.BookingName} - ${b.Price}</li>"))}
-                        </ul>
-                        <p>Total: ${bookings.Sum(b => b.Price)}</p>
-                        <p>Thank you for choosing FlightEase for your travel needs!</p>
-";
+                var tickets = await _ticketService.GetAllAsync();
 
-                    Console.WriteLine($"Attempting to send email to {userEmail}");
-                    await _emailService.SendEmailAsync(userEmail, subject, message);
-                    Console.WriteLine("Email sent successfully");
-
-
-                    // Rest of your code...
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Email error: {ex.Message}");
-                    Console.WriteLine($"Stack trace: {ex.StackTrace}");
-                    TempData["ErrorMessage"] = $"An error occurred while processing your order: {ex.Message}";
-                    return RedirectToAction("Index");
-                }
+                return tickets
+                    .Where(t =>
+                        t.FlightId == ticketVM.FlightId &&
+                        t.SeatId == ticketVM.Seats.Value &&
+                        t.MealId == ticketVM.Meals.Value &&
+                        t.ClassTypeId == ticketVM.ClassTypes.Value)
+                    .OrderByDescending(t => t.TicketId)
+                    .FirstOrDefault();
             }
-
-            TempData["ErrorMessage"] = "No bookings were created. Please try again.";
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetMostRecentTicketAsync: {ex.Message}");
+                throw; // Re-throw the exception so it's caught by the calling method
+            }
         }
     }
 }

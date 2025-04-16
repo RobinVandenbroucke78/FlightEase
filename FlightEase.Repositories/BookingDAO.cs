@@ -18,9 +18,18 @@ namespace FlightEase.Repositories
             _context = context;
         }
 
-        public Task AddAsync(Booking entity)
+        public async Task AddAsync(Booking entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _context.Bookings.AddAsync(entity);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error adding ticket");
+                throw ex;
+            }
         }
 
         public Task DeleteAsync(Booking entity)
