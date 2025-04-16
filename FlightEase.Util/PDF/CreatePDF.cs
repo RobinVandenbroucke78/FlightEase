@@ -34,20 +34,24 @@ namespace FlightEase.Util.PDF
                 document.Add(new Paragraph("Booking").SetFontSize(20));
                 document.Add(new Paragraph($"BookingId: {booking.BookingId}").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
                 document.Add(new Paragraph($"Datum: {booking.BookingDate}"));
+                document.Add(new Paragraph($"Naam: {booking.BookingName}"));
                 document.Add(new Paragraph(""));
 
                 // Ticketinformatie toevoegen
                 document.Add(new Paragraph("Ticketinformatie").SetFontSize(18));
                 document.Add(new Paragraph($"TicketId: {booking.TicketId}"));
+                document.Add(new Paragraph($"Seat: {booking.Ticket.SeatNumber}"));
+                document.Add(new Paragraph($"Meal: {booking.Ticket.Meal.MealName}"));
+                document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType.ClassName}"));
+                document.Add(new Paragraph($"Prijs: {booking.Ticket.Price:C}"));
+
+                //Flight informatie toevoegen
+                document.Add(new Paragraph("Flightinformatie").SetFontSize(18));
                 //document.Add(new Paragraph($"Vertrek: {booking.Ticket.Flight.FromAirport.City.CityName}"));
                 //document.Add(new Paragraph($"Bestemming: {booking.Ticket.Flight.ToAirport.City.CityName}"));
                 //document.Add(new Paragraph($"Tussenstoppen: {booking.Ticket.Flight.Transfer.FirstAirport.City.CityName} - {booking.Ticket.Flight.Transfer.SecondAirport.City.CityName}"));
                 //document.Add(new Paragraph($"Vertrekdatum: {booking.Ticket.Flight.DepartureTime}"));
                 //document.Add(new Paragraph($"Aankomstdatum: {booking.Ticket.Flight.ArrivalTime}"));
-                document.Add(new Paragraph($"Seat: {booking.Ticket.SeatNumber}"));
-                document.Add(new Paragraph($"Meal: {booking.Ticket.Meal.MealName}"));
-                document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType.ClassName}"));
-                document.Add(new Paragraph($"Prijs: {booking.Ticket.Price:C}"));
 
                 //// Totaalbedrag toevoegen
                 document.Add(new Paragraph($"Totaalbedrag: {booking.Price:C}"));
