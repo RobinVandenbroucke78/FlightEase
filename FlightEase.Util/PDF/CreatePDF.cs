@@ -30,11 +30,11 @@ namespace FlightEase.Util.PDF
                 logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
                 document.Add(logo);
                 string companyName = "FlightEase";
-                
-                document.Add(new Paragraph("Booking").SetFontSize(20));
+
+                document.Add(new Paragraph(companyName).SetFontSize(24));
+                document.Add(new Paragraph($"Booking: {booking.BookingName}").SetFontSize(18));
                 document.Add(new Paragraph($"BookingId: {booking.BookingId}").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
                 document.Add(new Paragraph($"Datum: {booking.BookingDate}"));
-                document.Add(new Paragraph($"Naam: {booking.BookingName}"));
                 document.Add(new Paragraph(""));
 
                 // Ticketinformatie toevoegen
