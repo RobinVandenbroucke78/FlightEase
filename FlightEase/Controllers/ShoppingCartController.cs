@@ -284,17 +284,15 @@ namespace FlightEase.Controllers
                         // Send email
                         string subject = "Your FlightEase Booking Confirmation";
                         string message = $@"
-                    <h2>Thank you for your booking with FlightEase!</h2>
-                    <p>Your booking has been confirmed.</p>
-                    <p>Details:</p>
-                    <ul>
-                        {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: {b.BookingName} - ${b.Price}</li>"))}
-                    </ul>
-                    <p>Total: ${bookings.Sum(b => b.Price)}</p>
-                    <p>Thank you for choosing FlightEase for your travel needs!</p>
-                ";
+                            <h2>Thank you for your booking with FlightEase!</h2>
+                            <p>Your booking has been confirmed.</p>
+                            <p>Details:</p>
+                            <ul>
+                                {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: <br> BookingName: {b.BookingName} <br> Price: ${b.Price}</li>"))}
+                            </ul>
+                            <p>Total: ${bookings.Sum(b => b.Price)}</p>
+                            <p>Thank you for choosing FlightEase for your travel needs!</p>";
 
-                        Console.WriteLine($"Attempting to send email to {userEmail}");
                         await _emailService.SendEmailAsync(userEmail, subject, message);
                         Console.WriteLine("Email sent successfully");
 
