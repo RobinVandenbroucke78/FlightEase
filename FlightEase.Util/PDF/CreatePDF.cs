@@ -8,12 +8,13 @@ using iText.Kernel.Pdf;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using QRCoder;
+using System.Drawing;
 
 namespace FlightEase.Util.PDF
 {
     public class CreatePDF : ICreatePDF
     {
-        public MemoryStream CreatePDFDocumentAsync(List<Booking> bookings, string logoPath)
+        public MemoryStream CreatePDFDocumentAsync(Booking booking, string logoPath)
         {
 
             // Genereren van de PDF-factuur
@@ -25,45 +26,41 @@ namespace FlightEase.Util.PDF
                 iText.Layout.Document document = new iText.Layout.Document(pdf);
 
                 // Factuurinformatie toevoegen
-                //iText.Layout.Element.Image logo = new iText.Layout.Element.Image(ImageDataFactory.Create(logoPath)).ScaleToFit(50, 50);
-                //logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
-                //document.Add(logo);
-                string companyName = "Hogeschool VIVES";
+                iText.Layout.Element.Image logo = new iText.Layout.Element.Image(ImageDataFactory.Create(logoPath)).ScaleToFit(50, 50);
+                logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+                document.Add(logo);
+                string companyName = "FlightEase";
                 var qrGenerator = new QRCodeGenerator();
                 var qrCodeData = qrGenerator.CreateQrCode(companyName, QRCodeGenerator.ECCLevel.Q);
-                //var qrCode = new QRCode(qrCodeData);
-                //var qrCodeImage = qrCode.GetGraphic(3);
+                var qrCode = new QRCode(qrCodeData);
+                var qrCodeImage = qrCode.GetGraphic(3);
 
-                //iText.Layout.Element.Image qrCodeImageElement = new iText.Layout.Element.Image(ImageDataFactory.Create(BitmapToBytes(qrCodeImage))).SetHorizontalAlignment(HorizontalAlignment.CENTER);
-
-
-                //document.Add(qrCodeImageElement);
-                //document.Add(new Paragraph("Factuur").SetFontSize(20));
-                //document.Add(new Paragraph("Factuurnummer: 001").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
-                //document.Add(new Paragraph("Datum: " + DateTime.Now.ToShortDateString()));
-                //document.Add(new Paragraph(""));
+                iText.Layout.Element.Image qrCodeImageElement = new iText.Layout.Element.Image(ImageDataFactory.Create(BitmapToBytes(qrCodeImage))).SetHorizontalAlignment(HorizontalAlignment.CENTER);
 
 
-                //// Tabel voor producten
-                //Table table = new Table(UnitValue.CreatePercentArray(3)).UseAllAvailableWidth();
-                //table.AddHeaderCell("Product");
-                //table.AddHeaderCell("Prijs per stuk");
-                //table.AddHeaderCell("Totaal");
-                //decimal totalPrice = 0;
-                //foreach (var product in products)
-                //{
-                //    table.AddCell(product.Name);
-                //    table.AddCell(product.Price.ToString("C"));
-                //    decimal totalProductPrice = product.Price * product.Number;
-                //    table.AddCell(totalProductPrice.ToString("C"));
-                //    totalPrice += totalProductPrice;
-                //}
-                //document.Add(table);
+                document.Add(qrCodeImageElement);
+                document.Add(new Paragraph("Booking").SetFontSize(20));
+                document.Add(new Paragraph($"BookingId: {booking.BookingId}").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
+                document.Add(new Paragraph($"Datum: {booking.BookingDate}"));
+                document.Add(new Paragraph(""));
+
+                // Ticketinformatie toevoegen
+                document.Add(new Paragraph("Ticketinformatie").SetFontSize(18));
+                document.Add(new Paragraph($"TicketId: {booking.TicketId}"));
+                document.Add(new Paragraph($"Vertrek: {booking.Ticket.Flight.FromAirport}"));
+                document.Add(new Paragraph($"Bestemming: {booking.Ticket.Flight.ToAirport}"));
+                document.Add(new Paragraph($"Vertrekdatum: {booking.Ticket.Flight.DepartureTime}"));
+                document.Add(new Paragraph($"Aankomstdatum: {booking.Ticket.Flight.ArrivalTime}"));
+                document.Add(new Paragraph($"Seat: {booking.Ticket.SeatNumber}"));
+                document.Add(new Paragraph($"Meal: {booking.Ticket.Meal}"));
+                document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType}"));
+                document.Add(new Paragraph($"Prijs: {booking.Ticket.Price:C}"));
+
 
                 //// Totaalbedrag toevoegen
-                //document.Add(new Paragraph($"Totaalbedrag: {totalPrice.ToString("C")}"));
+                document.Add(new Paragraph($"Totaalbedrag: {booking.Price:C}"));
 
-                //document.Close();
+                document.Close();
                 return new MemoryStream(stream.ToArray());
 
 
@@ -72,14 +69,14 @@ namespace FlightEase.Util.PDF
 
 
         // This method is for converting bitmap into a byte array
-        //private static byte[] BitmapToBytes(Bitmap img)
-        //{
-        //    using (MemoryStream stream = new MemoryStream())
-        //    {
-        //        img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-        //        return stream.ToArray();
-        //    }
-        //}
+        private static byte[] BitmapToBytes(Bitmap img)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                return stream.ToArray();
+            }
+        }
     }
 
 }
