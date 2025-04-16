@@ -306,8 +306,6 @@ namespace FlightEase.Controllers
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Email error: {ex.Message}");
-                        Console.WriteLine($"Stack trace: {ex.StackTrace}");
                         TempData["ErrorMessage"] = $"An error occurred while sending confirmation email: {ex.Message}";
                         return RedirectToAction("Index");
                     }
@@ -318,8 +316,6 @@ namespace FlightEase.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Unhandled error in ConfirmOrder: {ex.Message}");
-                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 TempData["ErrorMessage"] = "An unexpected error occurred. Please try again.";
                 return RedirectToAction("Index");
             }
