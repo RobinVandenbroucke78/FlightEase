@@ -14,7 +14,7 @@ namespace FlightEase.Util.PDF
 {
     public class CreatePDF : ICreatePDF
     {
-        public MemoryStream CreatePDFDocumentAsync(Booking booking, string logoPath)
+        public MemoryStream CreatePDFDocumentAsync(Booking booking, string logoPath, Flight flight)
         {
 
             // Genereren van de PDF-factuur
@@ -33,7 +33,7 @@ namespace FlightEase.Util.PDF
 
                 document.Add(new Paragraph(companyName).SetFontSize(24));
                 document.Add(new Paragraph($"Booking: {booking.BookingName}").SetFontSize(18));
-                document.Add(new Paragraph($"BookingId: {booking.BookingId}").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
+                document.Add(new Paragraph($"BookingId: {booking.BookingId}"));
                 document.Add(new Paragraph($"Datum: {booking.BookingDate}"));
                 document.Add(new Paragraph(""));
 
@@ -43,15 +43,14 @@ namespace FlightEase.Util.PDF
                 document.Add(new Paragraph($"Seat: {booking.Ticket.SeatNumber}"));
                 document.Add(new Paragraph($"Meal: {booking.Ticket.Meal.MealName}"));
                 document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType.ClassName}"));
-                document.Add(new Paragraph($"Prijs: {booking.Ticket.Price:C}"));
 
                 //Flight informatie toevoegen
                 document.Add(new Paragraph("Flightinformatie").SetFontSize(18));
-                //document.Add(new Paragraph($"Vertrek: {booking.Ticket.Flight.FromAirport.City.CityName}"));
-                //document.Add(new Paragraph($"Bestemming: {booking.Ticket.Flight.ToAirport.City.CityName}"));
-                //document.Add(new Paragraph($"Tussenstoppen: {booking.Ticket.Flight.Transfer.FirstAirport.City.CityName} - {booking.Ticket.Flight.Transfer.SecondAirport.City.CityName}"));
-                //document.Add(new Paragraph($"Vertrekdatum: {booking.Ticket.Flight.DepartureTime}"));
-                //document.Add(new Paragraph($"Aankomstdatum: {booking.Ticket.Flight.ArrivalTime}"));
+                document.Add(new Paragraph($"Vertrek: {flight.FromAirport.City.CityName}"));
+                document.Add(new Paragraph($"Bestemming: {flight.ToAirport.City.CityName}"));
+                document.Add(new Paragraph($"Tussenstoppen: {flight.Transfer.FirstAirport.City.CityName} - {flight.Transfer.SecondAirport.City.CityName}"));
+                document.Add(new Paragraph($"Vertrekdatum: {flight.DepartureTime}"));
+                document.Add(new Paragraph($"Aankomstdatum: {flight.ArrivalTime}"));
 
                 //// Totaalbedrag toevoegen
                 document.Add(new Paragraph($"Totaalbedrag: {booking.Price:C}"));
@@ -69,8 +68,6 @@ namespace FlightEase.Util.PDF
 
                 document.Close();
                 return new MemoryStream(stream.ToArray());
-
-
             }
         }
 

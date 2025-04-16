@@ -270,7 +270,7 @@ namespace FlightEase.Controllers
                     try
                     {
                         // Send email
-                        EmailController emailController = new EmailController(_emailSend, _createPDF, _hostEnvironment);
+                        EmailController emailController = new EmailController(_emailSend, _createPDF, _hostEnvironment, _ticketService, _flightService);
                         await emailController.SendEmail(bookings.First(), userEmail);
 
                         // Clear the shopping cart

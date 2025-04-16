@@ -1,4 +1,5 @@
 ﻿using FlightEase.Domains.Entities;
+using FlightEase.Services.Interfaces;
 using FlightEase.Util.Mail.Interfaces;
 using FlightEase.Util.PDF.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -9,13 +10,17 @@ namespace FlightEase.Controllers
     {
         private readonly IEmailSend _emailSend;
         private readonly ICreatePDF _createPDF;
+        private readonly IService<Ticket> _ticketService;
+        private readonly IService<Flight> _flightService;
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public EmailController(IEmailSend emailSend, ICreatePDF createPDF, IWebHostEnvironment hostEnvironment)
+        public EmailController(IEmailSend emailSend, ICreatePDF createPDF, IWebHostEnvironment hostEnvironment, IService<Ticket> ticketService, IService<Flight> flightService)
         {
             _emailSend = emailSend;
             _createPDF = createPDF;
             _hostEnvironment = hostEnvironment;
+            _ticketService = ticketService;
+            _flightService = flightService;
         }
 
         public IActionResult Index()
@@ -29,9 +34,13 @@ namespace FlightEase.Controllers
         {
             try
             {
+                //Retrieve the flight information based on the booking
+                var ticket = await _ticketService.FindByIdAsync(booking.TicketId);
+                Flight? flight = await _flightService.FindByIdAsync(ticket.FlightId);
+
                 // Assuming you have a booking object to pass to the PDF creation
                 string logoPath = Path.Combine(_hostEnvironment.ContentRootPath, "wwwroot", "images", "logo.png");
-                var pdfStream = _createPDF.CreatePDFDocumentAsync(booking, logoPath);
+                var pdfStream = _createPDF.CreatePDFDocumentAsync(booking, logoPath, flight);
                 string subject = "Your FlightEase Booking Confirmation";
                 string message = $@"
                             <h2>Thank you for your booking with FlightEase!</h2>
