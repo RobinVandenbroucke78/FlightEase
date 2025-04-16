@@ -2,23 +2,11 @@
 using FlightEase.Services.Interfaces;
 using FlightEase.ViewModels;
 using FlightEase.Domains.Entities;
-using Microsoft.AspNetCore.Mvc;
-using FlightEase.Services.Interfaces;
-using FlightEase.ViewModels;
-using FlightEase.Domains.Entities;
-using System.Linq;
-using System.Threading.Tasks;
 using FlightEase.Extentions;
-using AutoMapper;
-using FlightEase.Services;
-using System.Net.Sockets;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using FlightEase.Util.Mail.Interfaces;
 using FlightEase.Util.PDF.Interfaces;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Identity;
-using NuGet.Protocol;
-using Org.BouncyCastle.Bcpg;
 
 namespace FlightEase.Controllers
 {
@@ -31,9 +19,9 @@ namespace FlightEase.Controllers
         private readonly IService<Meal> _mealService;
         private readonly IService<Season> _seasonService;
         private readonly IService<Booking> _bookingService;
-        private readonly IEmailSend _emailService;
-        private readonly ICreatePDF _pdfService;
-        private readonly IMapper _mapper;
+        private readonly IEmailSend _emailSend;
+        private readonly ICreatePDF _createPDF;
+        private readonly IWebHostEnvironment _hostEnvironment;
         private readonly UserManager<IdentityUser> _userManager;
 
 
@@ -45,9 +33,9 @@ namespace FlightEase.Controllers
             IService<Meal> mealService,
             IService<Season> seasonService,
             IService<Booking> bookingService,
-            IEmailSend emailService,
-            ICreatePDF pdfService,
-            IMapper mapper,
+            IEmailSend emailSend,
+            ICreatePDF createPDF,
+            IWebHostEnvironment hostEnvironment,
             UserManager<IdentityUser> userManager)
         {
             _flightService = flightService;
@@ -57,9 +45,9 @@ namespace FlightEase.Controllers
             _mealService = mealService;
             _seasonService = seasonService;
             _bookingService = bookingService;
-            _emailService = emailService;
-            _pdfService = pdfService;
-            _mapper = mapper;
+            _emailSend = emailSend;
+            _createPDF = createPDF;
+            _hostEnvironment = hostEnvironment;
             _userManager = userManager;
         }
 
@@ -282,19 +270,8 @@ namespace FlightEase.Controllers
                     try
                     {
                         // Send email
-                        string subject = "Your FlightEase Booking Confirmation";
-                        string message = $@"
-                            <h2>Thank you for your booking with FlightEase!</h2>
-                            <p>Your booking has been confirmed.</p>
-                            <p>Details:</p>
-                            <ul>
-                                {string.Join("", bookings.Select(b => $"<li>Booking #{b.BookingId}: <br> BookingName: {b.BookingName} <br> Price: ${b.Price}</li>"))}
-                            </ul>
-                            <p>Total: ${bookings.Sum(b => b.Price)}</p>
-                            <p>Thank you for choosing FlightEase for your travel needs!</p>";
-
-                        await _emailService.SendEmailAsync(userEmail, subject, message);
-                        Console.WriteLine("Email sent successfully");
+                        EmailController emailController = new EmailController(_emailSend, _createPDF, _hostEnvironment);
+                        await emailController.SendEmail(bookings.First(), userEmail);
 
                         // Clear the shopping cart
                         HttpContext.Session.Remove("ShoppingCart");

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlightEase.Domains")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59db0987b8292f207cfb6837252d3254748554fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94a32af48f52a0e22b41895a496ad4325312bca3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlightEase.Domains")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlightEase.Domains")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

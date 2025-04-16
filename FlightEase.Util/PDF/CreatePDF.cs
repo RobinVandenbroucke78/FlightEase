@@ -30,15 +30,7 @@ namespace FlightEase.Util.PDF
                 logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
                 document.Add(logo);
                 string companyName = "FlightEase";
-                var qrGenerator = new QRCodeGenerator();
-                var qrCodeData = qrGenerator.CreateQrCode(companyName, QRCodeGenerator.ECCLevel.Q);
-                var qrCode = new QRCode(qrCodeData);
-                var qrCodeImage = qrCode.GetGraphic(3);
-
-                iText.Layout.Element.Image qrCodeImageElement = new iText.Layout.Element.Image(ImageDataFactory.Create(BitmapToBytes(qrCodeImage))).SetHorizontalAlignment(HorizontalAlignment.CENTER);
-
-
-                document.Add(qrCodeImageElement);
+                
                 document.Add(new Paragraph("Booking").SetFontSize(20));
                 document.Add(new Paragraph($"BookingId: {booking.BookingId}").SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA)).SetFontSize(16).SetFontColor(ColorConstants.BLUE));
                 document.Add(new Paragraph($"Datum: {booking.BookingDate}"));
@@ -47,18 +39,29 @@ namespace FlightEase.Util.PDF
                 // Ticketinformatie toevoegen
                 document.Add(new Paragraph("Ticketinformatie").SetFontSize(18));
                 document.Add(new Paragraph($"TicketId: {booking.TicketId}"));
-                document.Add(new Paragraph($"Vertrek: {booking.Ticket.Flight.FromAirport}"));
-                document.Add(new Paragraph($"Bestemming: {booking.Ticket.Flight.ToAirport}"));
-                document.Add(new Paragraph($"Vertrekdatum: {booking.Ticket.Flight.DepartureTime}"));
-                document.Add(new Paragraph($"Aankomstdatum: {booking.Ticket.Flight.ArrivalTime}"));
+                //document.Add(new Paragraph($"Vertrek: {booking.Ticket.Flight.FromAirport.City.CityName}"));
+                //document.Add(new Paragraph($"Bestemming: {booking.Ticket.Flight.ToAirport.City.CityName}"));
+                //document.Add(new Paragraph($"Tussenstoppen: {booking.Ticket.Flight.Transfer.FirstAirport.City.CityName} - {booking.Ticket.Flight.Transfer.SecondAirport.City.CityName}"));
+                //document.Add(new Paragraph($"Vertrekdatum: {booking.Ticket.Flight.DepartureTime}"));
+                //document.Add(new Paragraph($"Aankomstdatum: {booking.Ticket.Flight.ArrivalTime}"));
                 document.Add(new Paragraph($"Seat: {booking.Ticket.SeatNumber}"));
-                document.Add(new Paragraph($"Meal: {booking.Ticket.Meal}"));
-                document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType}"));
+                document.Add(new Paragraph($"Meal: {booking.Ticket.Meal.MealName}"));
+                document.Add(new Paragraph($"Classtype: {booking.Ticket.ClassType.ClassName}"));
                 document.Add(new Paragraph($"Prijs: {booking.Ticket.Price:C}"));
-
 
                 //// Totaalbedrag toevoegen
                 document.Add(new Paragraph($"Totaalbedrag: {booking.Price:C}"));
+
+                //QR-code
+                var qrGenerator = new QRCodeGenerator();
+                var qrCodeData = qrGenerator.CreateQrCode(companyName, QRCodeGenerator.ECCLevel.Q);
+                var qrCode = new QRCode(qrCodeData);
+                var qrCodeImage = qrCode.GetGraphic(3);
+
+                iText.Layout.Element.Image qrCodeImageElement = new iText.Layout.Element.Image(ImageDataFactory.Create(BitmapToBytes(qrCodeImage))).SetHorizontalAlignment(HorizontalAlignment.CENTER);
+
+                document.Add(qrCodeImageElement);
+
 
                 document.Close();
                 return new MemoryStream(stream.ToArray());
