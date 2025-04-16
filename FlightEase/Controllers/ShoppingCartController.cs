@@ -224,28 +224,43 @@ namespace FlightEase.Controllers
 
             List<Booking> bookings = new List<Booking>();
 
-            // Create bookings for each approved ticket
-            foreach (var ticketVM in approvedTickets)
+            try
             {
-                // Find the ticket in database
-                var ticket = await _ticketService.FindByIdAsync(ticketVM.TicketId);
-                if (ticket == null) continue;
-
-                // Create booking
-                var booking = new Booking
+                // Create bookings for each approved ticket
+                foreach (var ticketVM in approvedTickets)
                 {
-                    UserId = userId,
-                    TicketId = ticket.TicketId,
-                    BookingDate = DateTime.Now,
-                    BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
-                    Price = ticket.Price
-                };
+                    // Find the ticket in database
+                    var ticket = await _ticketService.FindByIdAsync(ticketVM.TicketId);
+                    if (ticket != null && userId != null)
+                    {
+                        // Create booking
+                        var booking = new Booking
+                        {
+                            UserId = userId,
+                            TicketId = ticket.TicketId,
+                            BookingDate = DateTime.Now,
+                            BookingName = $"Booking for flight {ticket.FlightId} - {ticketVM.FromAirport} to {ticketVM.ToAirport}",
+                            Price = ticket.Price
+                        };
 
-                // Add to database
-                await _bookingService.AddAsync(booking);
-                bookings.Add(booking);
+                        // Add to database
+                        await _bookingService.AddAsync(booking);
+                        bookings.Add(booking);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Ticket not found or user ID is null: TicketId={ticketVM.TicketId}, UserId={userId}");
+                        return RedirectToAction("Index");
+                    }
+                }
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting user ID: {ex.Message}");
+                TempData["ErrorMessage"] = "An error occurred while processing your order. Please try again.";
+                return RedirectToAction("Index");
+            }
+            
             if (bookings.Count > 0)
             {
                 try
