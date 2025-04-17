@@ -67,33 +67,33 @@
                 @if (!Model.Tickets[i].IsApproved)
                 {
                     <form asp-action="ApproveTicket" asp-route-index="@i" method="post">
-                        <input type="hidden" asp-for="@Model.Tickets[i].FlightId" />
-                        <input type="hidden" asp-for="@Model.Tickets[i].FromAirport" />
-                        <input type="hidden" asp-for="@Model.Tickets[i].ToAirport" />
+                        <input type="hidden" name="Tickets[0].FlightId" value="@Model.Tickets[i].FlightId" />
+                        <input type="hidden" name="Tickets[0].FromAirport" value="@Model.Tickets[i].FromAirport" />
+                        <input type="hidden" name="Tickets[0].ToAirport" value="@Model.Tickets[i].ToAirport" />
+                        <input type="hidden" name="Tickets[0].Price" value="@Model.Tickets[i].Price" />
                     <td>
-                        <input asp-for="@Model.Tickets[i].Count" type="number" min="1" max="5" data-aantal=@i />
+                        <input name="Tickets[0].Count" type="number" min="1" max="5" value="@Model.Tickets[i].Count" data-aantal=@i />
                     </td>
                     <td>
-                        <input type="hidden" asp-for="@Model.Tickets[i].Price" />
                             @Html.DisplayFor(m => Model.Tickets[i].Price)
                     </td>
                     <td>
-                        <select asp-for="@Model.Tickets[i].ClassTypes" asp-items="@Model.ClassTypes">
+                        <select name="Tickets[0].ClassTypes" asp-items="@Model.ClassTypes">
                             <option>Please select one</option>
                         </select>
                     </td>
                     <td>
-                        <select asp-for="@Model.Tickets[i].Meals" asp-items="@Model.Meals">
+                        <select name="Tickets[0].Meals" asp-items="@Model.Meals">
                             <option>Please select one</option>
                         </select>
                     </td>
                     <td>
-                        <select asp-for="@Model.Tickets[i].Seats" asp-items="@Model.Seats">
+                        <select name="Tickets[0].Seats" asp-items="@Model.Seats">
                             <option>Please select one</option>
                         </select>
                     </td>
                     <td>
-                        <select asp-for="@Model.Tickets[i].Seasons" asp-items="@Model.Seasons">
+                        <select name="Tickets[0].Seasons" asp-items="@Model.Seasons">
                             <option>Please select one</option>
                         </select>
                     </td>

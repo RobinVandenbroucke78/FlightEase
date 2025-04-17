@@ -107,9 +107,42 @@ namespace FlightEase.Controllers
             }
 
             // Get the ticket at the specified index
-            var ticketVM = model.Tickets[index];
-            shoppingCartVM.Tickets[index] = ticketVM;
+            var ticketVM = model.Tickets[0];
+
+            // Update the ticket in the shopping cart with form data
+            shoppingCartVM.Tickets[index].ClassTypes = ticketVM.ClassTypes;
+            shoppingCartVM.Tickets[index].Meals = ticketVM.Meals;
+            shoppingCartVM.Tickets[index].Seats = ticketVM.Seats;
+            shoppingCartVM.Tickets[index].Seasons = ticketVM.Seasons;
+            shoppingCartVM.Tickets[index].Count = ticketVM.Count;
+            shoppingCartVM.Tickets[index].FromAirport = ticketVM.FromAirport;
+            shoppingCartVM.Tickets[index].ToAirport = ticketVM.ToAirport;
             shoppingCartVM.Tickets[index].IsApproved = true;
+
+            // Update the ticket in the shopping cart with form data, but preserve airport info
+            var originalFromAirport = shoppingCartVM.Tickets[index].FromAirport;
+            var originalToAirport = shoppingCartVM.Tickets[index].ToAirport;
+
+            // Make sure we keep the airport information
+            if (string.IsNullOrEmpty(shoppingCartVM.Tickets[index].FromAirport))
+            {
+                // If the form data did include airport info, use it
+                if (!string.IsNullOrEmpty(ticketVM.FromAirport))
+                {
+                    shoppingCartVM.Tickets[index].FromAirport = ticketVM.FromAirport;
+                    shoppingCartVM.Tickets[index].ToAirport = ticketVM.ToAirport;
+                }
+                // Otherwise, try to load it from the flight
+                else
+                {
+                    var flight = await _flightService.FindByIdAsync(shoppingCartVM.Tickets[index].FlightId);
+                    if (flight != null)
+                    {
+                        shoppingCartVM.Tickets[index].FromAirport = flight.FromAirport.City.CityName;
+                        shoppingCartVM.Tickets[index].ToAirport = flight.ToAirport.City.CityName;
+                    }
+                }
+            }
 
             //load data from dropdown
             await LoadSelectedItems(shoppingCartVM.Tickets[index]);
@@ -271,13 +304,16 @@ namespace FlightEase.Controllers
                     {
                         // Send email
                         EmailController emailController = new EmailController(_emailSend, _createPDF, _hostEnvironment, _ticketService, _flightService);
-                        await emailController.SendEmail(bookings.First(), userEmail);
 
+                        foreach (var booking in bookings)
+                        {
+                            await emailController.SendEmail(booking, userEmail);
+
+                            TempData["SuccessMessage"] = "Your order has been placed successfully!";
+                            return RedirectToAction("Index", "Home");
+                        }
                         // Clear the shopping cart
                         HttpContext.Session.Remove("ShoppingCart");
-
-                        TempData["SuccessMessage"] = "Your order has been placed successfully!";
-                        return RedirectToAction("Index", "Home");
                     }
                     catch (Exception ex)
                     {
