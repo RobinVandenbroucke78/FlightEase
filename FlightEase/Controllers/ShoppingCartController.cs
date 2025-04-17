@@ -119,31 +119,6 @@ namespace FlightEase.Controllers
             shoppingCartVM.Tickets[index].ToAirport = ticketVM.ToAirport;
             shoppingCartVM.Tickets[index].IsApproved = true;
 
-            // Update the ticket in the shopping cart with form data, but preserve airport info
-            var originalFromAirport = shoppingCartVM.Tickets[index].FromAirport;
-            var originalToAirport = shoppingCartVM.Tickets[index].ToAirport;
-
-            // Make sure we keep the airport information
-            if (string.IsNullOrEmpty(shoppingCartVM.Tickets[index].FromAirport))
-            {
-                // If the form data did include airport info, use it
-                if (!string.IsNullOrEmpty(ticketVM.FromAirport))
-                {
-                    shoppingCartVM.Tickets[index].FromAirport = ticketVM.FromAirport;
-                    shoppingCartVM.Tickets[index].ToAirport = ticketVM.ToAirport;
-                }
-                // Otherwise, try to load it from the flight
-                else
-                {
-                    var flight = await _flightService.FindByIdAsync(shoppingCartVM.Tickets[index].FlightId);
-                    if (flight != null)
-                    {
-                        shoppingCartVM.Tickets[index].FromAirport = flight.FromAirport.City.CityName;
-                        shoppingCartVM.Tickets[index].ToAirport = flight.ToAirport.City.CityName;
-                    }
-                }
-            }
-
             //load data from dropdown
             await LoadSelectedItems(shoppingCartVM.Tickets[index]);
 

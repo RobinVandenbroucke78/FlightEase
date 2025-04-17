@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlightEase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4e172d8f5af124ecfa18fdbb228401d676323f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27c5d7968261ad6818c60d2b40e21b6d5214c71d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlightEase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlightEase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
