@@ -1,7 +1,7 @@
 ﻿@model FlightEase.ViewModels.ShoppingCartVM
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/flight.css" />
+<link rel="stylesheet" href="~/css/flight.css" />
 }
 
 <h1>Shopping Cart</h1>
@@ -71,34 +71,34 @@
                         <input type="hidden" name="Tickets[0].FromAirport" value="@Model.Tickets[i].FromAirport" />
                         <input type="hidden" name="Tickets[0].ToAirport" value="@Model.Tickets[i].ToAirport" />
                         <input type="hidden" name="Tickets[0].Price" value="@Model.Tickets[i].Price" />
-                    <td>
-                        <input name="Tickets[0].Count" type="number" min="1" max="5" value="@Model.Tickets[i].Count" data-aantal=@i />
-                    </td>
-                    <td>
+                        <td>
+                            <input name="Tickets[0].Count" type="number" min="1" max="5" value="@Model.Tickets[i].Count" data-aantal=@i />
+                        </td>
+                        <td>
                             @Html.DisplayFor(m => Model.Tickets[i].Price)
-                    </td>
-                    <td>
-                        <select name="Tickets[0].ClassTypes" asp-items="@Model.ClassTypes">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="Tickets[0].Meals" asp-items="@Model.Meals">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="Tickets[0].Seats" asp-items="@Model.Seats">
-                            <option>Please select one</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span class="text-muted">Auto-applied</span>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-success btn-sm">Approve</button>
-                        <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Cancel</a>
-                    </td>
+                        </td>
+                        <td>
+                            <select name="Tickets[0].ClassTypes" asp-items="@Model.ClassTypes">
+                                <option>Please select one</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Tickets[0].Meals" asp-items="@Model.Meals">
+                                <option>Please select one</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="Tickets[0].Seats" asp-items="@Model.Seats">
+                                <option>Please select one</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span class="text-muted">Auto-applied</span>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                            <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Cancel</a>
+                        </td>
                     </form>
                 }
                 else
@@ -121,9 +121,13 @@
                     </td>
                     <td>
                         @Html.DisplayFor(m => Model.Tickets[i].SeasonText)
-                        @if (Model.Tickets[i].Seasons.HasValue)
+                        @if (Model.Tickets[i].SeasonText != "Geen")
                         {
                             <span class="badge bg-success">30% Off</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">No Discount</span>
                         }
                     </td>
                     <td>
