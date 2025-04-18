@@ -158,13 +158,7 @@ namespace FlightEase.Controllers
             }
         }
 
-        private async Task SendEmailWithMultipleAttachments(
-            string email,
-            string subject,
-            string message,
-            List<MemoryStream> attachmentStreams,
-            List<string> attachmentNames,
-            bool isBodyHtml = true)
+        private async Task SendEmailWithMultipleAttachments(string email, string subject, string message, List<MemoryStream> attachmentStreams, List<string> attachmentNames,bool isBodyHtml = true)
         {
             try
             {
@@ -173,35 +167,14 @@ namespace FlightEase.Controllers
                     throw new ArgumentException("The number of attachment streams must match the number of attachment names");
                 }
 
-                // Send email with the first attachment
-                if (attachmentStreams.Count > 0)
-                {
-                    await _emailSend.SendEmailAttachmentAsync(
-                        email,
-                        subject,
-                        message,
-                        attachmentStreams[0],
-                        attachmentNames[0],
-                        isBodyHtml);
-
-                    // If there are more attachments, send them as separate emails with minimal content
-                    for (int i = 1; i < attachmentStreams.Count; i++)
-                    {
-                        string additionalMessage = $"<p>Additional ticket #{i + 1} attached.</p>";
-                        await _emailSend.SendEmailAttachmentAsync(
-                            email,
-                            $"{subject} - Additional Ticket #{i + 1}",
-                            additionalMessage,
-                            attachmentStreams[i],
-                            attachmentNames[i],
-                            isBodyHtml);
-                    }
-                }
-                else
-                {
-                    // If no attachments, just send the email
-                    await _emailSend.SendEmailAsync(email, subject, message);
-                }
+                // Send a single email with all attachments
+                await _emailSend.SendEmailWithMultipleAttachmentsAsync(
+                    email,
+                    subject,
+                    message,
+                    attachmentStreams.Cast<Stream>().ToList(),
+                    attachmentNames,
+                    isBodyHtml);
             }
             catch (Exception ex)
             {

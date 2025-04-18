@@ -11,5 +11,6 @@ namespace FlightEase.Util.Mail.Interfaces
         Task SendEmailAsync(string email, string subject, string message);
 
         Task SendEmailAttachmentAsync(string email, string subject, string message, Stream attachmentStream, string attachmentName, bool isBodyHtml = false);
+        Task SendEmailWithMultipleAttachmentsAsync(string email, string subject, string message, List<Stream> attachmentStreams, List<string> attachmentNames, bool isBodyHtml = false);
     }
 }
