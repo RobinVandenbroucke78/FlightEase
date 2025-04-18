@@ -96,7 +96,9 @@ namespace FlightEase.Controllers
             return RedirectToAction("Index");
         }
 
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ApproveTicket(int index, ShoppingCartVM model)
         {
             // Get shopping cart from session
@@ -109,17 +111,66 @@ namespace FlightEase.Controllers
             // Get the ticket at the specified index
             var ticketVM = model.Tickets[0];
 
+            // Request flight for dates and information
+            var flight = await _flightService.FindByIdAsync(ticketVM.FlightId);
+            if (flight == null)
+            {
+                ModelState.AddModelError("", "Flight not found.");
+                return RedirectToAction("Index");
+            }
+
+            // Automatically determine season based on flight departure date
+            var departureDateOnly = DateOnly.FromDateTime(flight.DepartureTime);
+            var seasons = await _seasonService.GetAllAsync();
+            Season? applicableSeason = null;
+
+            // Default to the "Geen" season (ID 3)
+            const int DEFAULT_SEASON_ID = 3;
+            string defaultSeasonName = "Geen";
+
+            foreach (var season in seasons)
+            {
+                // Skip seasons with null dates or the default "Geen" season
+                if (!season.BeginDate.HasValue || !season.EndDate.HasValue || season.SeasonId == DEFAULT_SEASON_ID)
+                    continue;
+
+                if (departureDateOnly >= season.BeginDate.Value && departureDateOnly <= season.EndDate.Value)
+                {
+                    applicableSeason = season;
+                    break;
+                }
+            }
+
+            // Update ticket price if season is applicable (30% discount)
+            double originalPrice = ticketVM.Price;
+            if (applicableSeason != null)
+            {
+                ticketVM.Seasons = applicableSeason.SeasonId;
+                ticketVM.SeasonText = applicableSeason.Name;
+                // Apply 30% discount
+                ticketVM.Price = Math.Round(originalPrice * 0.7, 2); // 30% off
+            }
+            else
+            {
+                // Use the default "Geen" season with ID 3
+                ticketVM.Seasons = DEFAULT_SEASON_ID;
+                ticketVM.SeasonText = defaultSeasonName;
+                // No discount applied - keep original price
+            }
+
             // Update the ticket in the shopping cart with form data
             shoppingCartVM.Tickets[index].ClassTypes = ticketVM.ClassTypes;
             shoppingCartVM.Tickets[index].Meals = ticketVM.Meals;
             shoppingCartVM.Tickets[index].Seats = ticketVM.Seats;
             shoppingCartVM.Tickets[index].Seasons = ticketVM.Seasons;
+            shoppingCartVM.Tickets[index].SeasonText = ticketVM.SeasonText;
             shoppingCartVM.Tickets[index].Count = ticketVM.Count;
             shoppingCartVM.Tickets[index].FromAirport = ticketVM.FromAirport;
             shoppingCartVM.Tickets[index].ToAirport = ticketVM.ToAirport;
+            shoppingCartVM.Tickets[index].Price = ticketVM.Price;
             shoppingCartVM.Tickets[index].IsApproved = true;
 
-            //load data from dropdown
+            // Load data from dropdown
             await LoadSelectedItems(shoppingCartVM.Tickets[index]);
 
             // Get the selected seat to retrieve the seat number
@@ -130,9 +181,6 @@ namespace FlightEase.Controllers
                 return RedirectToAction("Index");
             }
 
-            //request flight for dates
-            var flight = await _flightService.FindByIdAsync(ticketVM.FlightId);
-
             // Create a real ticket in the database
             Ticket newTicket = new Ticket
             {
@@ -142,7 +190,7 @@ namespace FlightEase.Controllers
                 SeatNumber = seat.SeatNumber,
                 MealId = ticketVM.Meals ?? 0,
                 ClassTypeId = ticketVM.ClassTypes ?? 0,
-                SeasonId = ticketVM.Seasons ?? 0,
+                SeasonId = ticketVM.Seasons.Value, // This will always be a valid ID now
                 IssueDate = DateOnly.FromDateTime(DateTime.Now)
             };
 
@@ -150,7 +198,6 @@ namespace FlightEase.Controllers
             for (int i = 0; i < ticketVM.Count; i++)
             {
                 await _ticketService.AddAsync(newTicket);
-                //Console.WriteLine($"Added ticket is: {newTicket.TicketId}");
             }
 
             // Save updated cart to session
@@ -181,11 +228,8 @@ namespace FlightEase.Controllers
                 ticket.SeatText = seat?.SeatNumber;
             }
 
-            if (ticket.Seasons.HasValue)
-            {
-                var season = await _seasonService.FindByIdAsync(ticket.Seasons.Value);
-                ticket.SeasonText = season?.Name;
-            }
+            // Season is now set automatically, so we don't need to load it here
+            // The SeasonText is already set in the ApproveTicket method
         }
 
         [HttpGet]
@@ -203,7 +247,6 @@ namespace FlightEase.Controllers
             return View(shoppingCartVM);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
@@ -218,7 +261,6 @@ namespace FlightEase.Controllers
                     TempData["ErrorMessage"] = "No approved tickets found to finalize order.";
                     return RedirectToAction("Index");
                 }
-
 
                 // Get approved tickets
                 var approvedTickets = shoppingCartVM.Tickets.Where(t => t.IsApproved).ToList();
@@ -313,7 +355,6 @@ namespace FlightEase.Controllers
                 return RedirectToAction("Index");
             }
         }
-
 
         //Get most recent ticket
         private async Task<Ticket?> GetMostRecentTicketAsync(TicketVM ticketVM)

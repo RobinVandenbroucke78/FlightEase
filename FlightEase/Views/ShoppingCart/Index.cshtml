@@ -46,7 +46,7 @@
                 @Html.DisplayNameFor(model => model.Tickets[0].Seats)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tickets[0].Seasons)
+                Season
             </th>
             <th>
                 Actions
@@ -93,9 +93,7 @@
                         </select>
                     </td>
                     <td>
-                        <select name="Tickets[0].Seasons" asp-items="@Model.Seasons">
-                            <option>Please select one</option>
-                        </select>
+                        <span class="text-muted">Auto-applied</span>
                     </td>
                     <td>
                         <button type="submit" class="btn btn-success btn-sm">Approve</button>
@@ -123,6 +121,10 @@
                     </td>
                     <td>
                         @Html.DisplayFor(m => Model.Tickets[i].SeasonText)
+                        @if (Model.Tickets[i].Seasons.HasValue)
+                        {
+                            <span class="badge bg-success">30% Off</span>
+                        }
                     </td>
                     <td>
                         <a asp-action="RemoveTicket" asp-route-index="@i" class="btn btn-danger btn-sm">Remove</a>
