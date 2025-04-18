@@ -44,13 +44,13 @@ namespace FlightEase.Util.Mail
 
         public async Task SendEmailAttachmentAsync(string email, string subject, string message, Stream attachmentStream, string attachmentName, bool isBodyHtml = false)
         {
-            var mail = new MailMessage(); // aanmaken van een mail-object
+            var mail = new MailMessage();
             mail.To.Add(new MailAddress(email));
             mail.From = new MailAddress(_emailSettings.Sender, _emailSettings.SenderName);
             mail.Subject = subject;
             mail.Body = message;
             mail.Attachments.Add(new Attachment(attachmentStream, attachmentName));
-            mail.IsBodyHtml = true;
+            mail.IsBodyHtml = isBodyHtml;
             try
             {
                 using (var smtp = new SmtpClient(_emailSettings.MailServer))
@@ -64,7 +64,9 @@ namespace FlightEase.Util.Mail
                 }
             }
             catch (Exception ex)
-            { throw ex; }
+            {
+                throw new Exception($"Failed to send email with attachment: {ex.Message}", ex);
+            }
         }
     }
 }

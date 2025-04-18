@@ -16,9 +16,7 @@ namespace FlightEase.Util.PDF
     {
         public MemoryStream CreatePDFDocumentAsync(Booking booking, string logoPath, Flight flight)
         {
-
             // Genereren van de PDF-factuur
-
             using (MemoryStream stream = new MemoryStream())
             {
                 PdfWriter writer = new PdfWriter(stream);
@@ -46,13 +44,27 @@ namespace FlightEase.Util.PDF
 
                 //Flight informatie toevoegen
                 document.Add(new Paragraph("Flightinformatie").SetFontSize(18));
-                document.Add(new Paragraph($"Vertrek: {flight.FromAirport.City.CityName}"));
-                document.Add(new Paragraph($"Bestemming: {flight.ToAirport.City.CityName}"));
-                document.Add(new Paragraph($"Tussenstoppen: {flight.Transfer.FirstAirport.City.CityName} - {flight.Transfer.SecondAirport.City.CityName}"));
+                document.Add(new Paragraph($"Vertrek: {flight.FromAirport?.City?.CityName ?? "N/A"}"));
+                document.Add(new Paragraph($"Bestemming: {flight.ToAirport?.City?.CityName ?? "N/A"}"));
+
+                // Safely handle transfers - check if transfer exists
+                string transferInfo = "Geen tussenstoppen";
+                if (flight.Transfer != null)
+                {
+                    string firstStop = flight.Transfer.FirstAirport?.City?.CityName ?? "Onbekend";
+                    string secondStop = flight.Transfer.SecondAirport?.City?.CityName ?? "Onbekend";
+
+                    if (firstStop != "Onbekend" || secondStop != "Onbekend")
+                    {
+                        transferInfo = $"{firstStop} - {secondStop}";
+                    }
+                }
+                document.Add(new Paragraph($"Tussenstoppen: {transferInfo}"));
+
                 document.Add(new Paragraph($"Vertrekdatum: {flight.DepartureTime}"));
                 document.Add(new Paragraph($"Aankomstdatum: {flight.ArrivalTime}"));
 
-                //// Totaalbedrag toevoegen
+                // Totaalbedrag toevoegen
                 document.Add(new Paragraph($"Totaalbedrag: {booking.Price:C}"));
 
                 //QR-code
@@ -65,12 +77,10 @@ namespace FlightEase.Util.PDF
 
                 document.Add(qrCodeImageElement);
 
-
                 document.Close();
                 return new MemoryStream(stream.ToArray());
             }
         }
-
 
         // This method is for converting bitmap into a byte array
         private static byte[] BitmapToBytes(Bitmap img)
@@ -82,5 +92,4 @@ namespace FlightEase.Util.PDF
             }
         }
     }
-
 }

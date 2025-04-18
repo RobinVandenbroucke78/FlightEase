@@ -130,6 +130,9 @@ namespace FlightEase.Controllers
                 return RedirectToAction("Index");
             }
 
+            //request flight for dates
+            var flight = await _flightService.FindByIdAsync(ticketVM.FlightId);
+
             // Create a real ticket in the database
             Ticket newTicket = new Ticket
             {
@@ -220,7 +223,7 @@ namespace FlightEase.Controllers
                 // Get approved tickets
                 var approvedTickets = shoppingCartVM.Tickets.Where(t => t.IsApproved).ToList();
 
-                // Get current user ID
+                // Get current user ID and email
                 string? userId = _userManager.GetUserId(User);
                 string? userEmail = User.Identity?.Name;
 
@@ -277,18 +280,22 @@ namespace FlightEase.Controllers
                 {
                     try
                     {
-                        // Send email
-                        EmailController emailController = new EmailController(_emailSend, _createPDF, _hostEnvironment, _ticketService, _flightService);
+                        // Create EmailController instance
+                        EmailController emailController = new EmailController(
+                            _emailSend,
+                            _createPDF,
+                            _hostEnvironment,
+                            _ticketService,
+                            _flightService);
 
-                        foreach (var booking in bookings)
-                        {
-                            await emailController.SendEmail(booking, userEmail);
+                        // Send a single email with multiple bookings/PDFs
+                        await emailController.SendMultipleBookingsEmail(bookings, userEmail);
 
-                            TempData["SuccessMessage"] = "Your order has been placed successfully!";
-                            return RedirectToAction("Index", "Home");
-                        }
                         // Clear the shopping cart
                         HttpContext.Session.Remove("ShoppingCart");
+
+                        TempData["SuccessMessage"] = "Your order has been placed successfully!";
+                        return RedirectToAction("Index", "Home");
                     }
                     catch (Exception ex)
                     {
